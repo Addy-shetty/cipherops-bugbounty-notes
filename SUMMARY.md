@@ -1,58 +1,146 @@
-# Table of Contents
+# Table of contents
 
-## 🚀 Getting Started
-- [Welcome](README.md)
-- [From Zero to First Bug](getting-started/01_From_Zero_to_First_Bug.md)
-- [Bug Bounty Platforms Compared](getting-started/02_Bug_Bounty_Platforms_Compared.md)
-- [Setting Up Your Lab](getting-started/03_Setting_Up_Your_Lab.md)
+* [💛 Welcome to the Future of Cybersecurity](README.md)
+  * [😎 Cipherops](readme/cipherops.md)
+  * [🤩 Embarking on Your Hacking Journey: A Guide for Beginners](readme/embarking-on-your-hacking-journey-a-guide-for-beginners.md)
+  * [🌏 Journeying Through the World of Ethical Hacking with Cipherops](readme/journeying-through-the-world-of-ethical-hacking-with-cipher-ops.md)
+  * [Bug Bounty Platforms Compared: Where to Hunt in 2026](readme/bug-bounty-platforms-compared-where-to-hunt-in-2026.md)
+  * [From Zero to First Bug: The Complete Beginner's Guide](readme/from-zero-to-first-bug-the-complete-beginners-guide.md)
 
-## 🔍 Reconnaissance
-- [AI-Powered Reconnaissance](reconnaissance/01_AI_Powered_Reconnaissance.md)
-- [50 Copy-Paste Recon Commands](reconnaissance/02_50_Copy_Paste_Commands.md)
-- [Subdomain Enumeration Deep Dive](reconnaissance/03_Subdomain_Enumeration_Deep_Dive.md)
-- [Information Gathering Complete Guide](reconnaissance/complete-guide-to-information-gathering-for-pentesting-20260323.md)
+## Overview
 
-## 🛠️ Tool Deep Dives
-- [Nuclei Complete Guide](tool-deep-dives/01_Nuclei_Complete_Guide.md)
-- [Nmap Complete Guide](tool-deep-dives/02_Nmap_Complete_Guide.md)
-- [Garak LLM Scanner Guide](tool-deep-dives/garak-llm-scanner-complete-guide-20260323.md)
-- [Nuclei Tool Spotlight](tool-deep-dives/tool-spotlight-nuclei.md)
+* [🗽 Let's Start](overview/lets-start/README.md)
+  * [🥳 Exploring Top Platforms and Websites for Hacking Practice and Learning](overview/lets-start/exploring-top-platforms-and-websites-for-hacking-practice-and-learning.md)
+  * [📍 Resources](overview/lets-start/resources/README.md)
+    * [🌏 30 cybersecurity search engines](overview/lets-start/resources/30-cybersecurity-search-engines.md)
+    * [🦸 From Zero to Hero: Navigating Linux Commands Like a Pro](overview/lets-start/resources/from-zero-to-hero-navigating-linux-commands-like-a-pro.md)
+    * [📇 Cracking the Code: How Damn Vulnerabilities Lab List Can Make You a Cybersecurity Pro](overview/lets-start/resources/cracking-the-code-how-damn-vulnerabilities-lab-list-can-make-you-a-cybersecurity-pro.md)
+    * [🍥 Level Up Your Cybersecurity Skills: A TryHackMe Roadmap for Success](overview/lets-start/resources/level-up-your-cybersecurity-skills-a-tryhackme-roadmap-for-success.md)
+    * [🦈 The Ultimate Guide to Mastering Offensive Virtual Machines for Ethical Hacking](overview/lets-start/resources/the-ultimate-guide-to-mastering-offensive-virtual-machines-for-ethical-hacking.md)
+    * [😤 Stay One Step Ahead of Hackers: Discover the Ultimate Cybersecurity YouTube Channels](overview/lets-start/resources/stay-one-step-ahead-of-hackers-discover-the-ultimate-cybersecurity-youtube-channels.md)
+    * [All DAMN vulnerable resources](overview/lets-start/resources/all-damn-vulnerable-resources.md)
+    * [Hacking Resources](overview/lets-start/resources/hacking-resources.md)
+* [👣 OSINT](overview/osint/README.md)
+  * [🕹️ Exploring the Digital Universe: Mastering Tools for IP, Domain, and Email Analysis🌐🔍💼](overview/osint/your-ultimate-guide-tools-for-ip-domain-and-email-analysis.md)
+* [🦝 Google Hacking using Dorks](overview/google-hacking-using-dorks/README.md)
+  * [📙 Essential Bug Bounty Resources: Books and References](overview/google-hacking-using-dorks/books-and-references.md)
+  * [🌯 Optimizing Bug Bounty with GitHub Dorks: A Comprehensive Guide](overview/google-hacking-using-dorks/github-dorks.md)
 
-## 🌐 Web Application Testing
-- [SQL Injection Basics](web-testing/sql-injection-20260316.md)
-- [SQL Injection Mastery](web-testing/sql-injection-mastery:-from-basic-to-blind-20260323.md)
-- [XSS Vulnerabilities](web-testing/xss-vulnerabilities-20260316.md)
-- [XSS Exploitation: Basic to Advanced](web-testing/xss-exploitation:-from-basic-to-advanced-20260323.md)
-- [Parameter Pollution Technique](web-testing/technique-breakdown-parameter-pollution.md)
-- [CVE CrushFTP RCE](web-testing/monday-cve-crushftp-rce.md)
-- [The $15,000 CrushFTP Story](web-testing/enhanced-monday-crushftp-story.md)
-- [Tool Spotlight: Amass](web-testing/tuesday-tool-amass.md)
-- [Amass Hero's Journey](web-testing/enhanced-tuesday-amass-story.md)
-- [Technique: XXE via SVG](web-testing/wednesday-technique-xxe-svg.md)
-- [How-To: Setup Your Lab](web-testing/thursday-howto-setup-lab.md)
-- [Weekly Roundup #001](web-testing/friday-weekly-roundup-001.md)
-- [XSS Payloads Collection](web-testing/saturday-xss-payloads.md)
-- [Community Q&A](web-testing/sunday-community-qa.md)
+***
 
-## 🌍 Network Testing
-- [Network Scanning: Nmap to RustScan](network-testing/network-scanning-deep-dive:-nmap-to-rustscan-20260323.md)
+* [ℹ️ Recon Tips](recon-tips/README.md)
+  * [How AI Changed My Bug Bounty Workflow: 60% Faster Recon, 3x More Findings](recon-tips/how-ai-changed-my-bug-bounty-workflow-60-faster-recon-3x-more-findings.md)
+  * [AI-Powered Reconnaissance: The Complete 2026 Guide](recon-tips/ai-powered-reconnaissance-the-complete-2026-guide.md)
+  * [😍 30 Commonly Targeted Ports by Hackers: A Comprehensive Guide](recon-tips/30-commonly-targeted-ports-by-hackers-a-comprehensive-guide.md)
+  * [🎗️ Best Recon Technique For Active Subdomain Enumeration](recon-tips/best-recon-technique-for-active-subdomain-enumeration.md)
+  * [1️⃣ Unlocking Bounty Riches: A Glimpse into the World of Awesome Bug Bounties](recon-tips/one-liner-from-awesome-bug-bounty.md)
+  * [🚡 Streamlining Your Reconnaissance Workflow for Effective Bug Bounty Hunting](recon-tips/streamlining-your-reconnaissance-workflow-for-effective-bug-bounty-hunting.md)
+  * [🌊 Mastering the Art of Information Gathering](recon-tips/mastering-the-art-of-information-gathering.md)
+  * [🫐 Series on : The Power of Reconnaissance Tools](recon-tips/series-on-the-power-of-reconnaissance-tools/README.md)
+    * [🔩 Tool - 1 Subscraper](recon-tips/series-on-the-power-of-reconnaissance-tools/tool-1-subscraper.md)
+    * [🔧 Tool - 2 Findomain Subdomain Enumeration Tool](recon-tips/series-on-the-power-of-reconnaissance-tools/tool-2-findomain-subdomain-enumeration-tool.md)
+    * [🏹 Tool - 3 Assetfinder: Subdomain Enumeration Tool Manual](recon-tips/series-on-the-power-of-reconnaissance-tools/tool-3-assetfinder-subdomain-enumeration-tool-manual.md)
+    * [🔬 Tool - 4 Subfinder: An Essential Guide for Domain Reconnaissance](recon-tips/series-on-the-power-of-reconnaissance-tools/tool-4-subfinder-an-essential-guide-for-domain-reconnaissance.md)
+  * [50 Copy-Paste Recon Commands That Find Bugs](recon-tips/50-copy-paste-recon-commands-that-find-bugs.md)
+* [🕸️ Web Application](web-application/README.md)
+  * [How-To Guide: Setting Up Your First Bug Bounty Lab](web-application/how-to-guide-setting-up-your-first-bug-bounty-lab.md)
+  * [🏺 Top 100 web vulnerabilities](web-application/top-100-web-vulnerabilities.md)
+  * [🥈 Introducing 20 web-application hacking tools🔥🤩🌵](web-application/introducing-20-web-application-hacking-tools.md)
+  * [🧪 Comprehensive Web Application Testing Checklist](web-application/comprehensive-web-application-testing-checklist.md)
+  * [👐 Unveiling Open Ports with Advanced Techniques](web-application/unveiling-open-ports-with-advanced-techniques.md)
+  * [🦊 The Art of XSS Exploitation](web-application/the-art-of-xss-exploitation.md)
+  * [📃 Crucial WordPress Security Misconfiguration You Need to Know](web-application/crucial-wordpress-security-misconfiguration-you-need-to-know.md)
+  * [🤯 Understanding SSRF Vulnerabilities and Their Impact](web-application/understanding-ssrf-vulnerabilities-and-their-impact/README.md)
+    * [🥫 Exploring the Canvas: Common Exploits for Accessing Internal Pages](web-application/understanding-ssrf-vulnerabilities-and-their-impact/exploring-the-canvas-common-exploits-for-accessing-internal-pages.md)
+    * [😉 Revealing Hidden Treasures: Accessing Internal Files via URL Scheme](web-application/understanding-ssrf-vulnerabilities-and-their-impact/revealing-hidden-treasures-accessing-internal-files-via-url-scheme.md)
+    * [🎊 Connecting to Services via URL Schemes](web-application/understanding-ssrf-vulnerabilities-and-their-impact/connecting-to-services-via-url-schemes.md)
+    * [🤖 Mastering SSRF Exploits: Unraveling Gopher's Web of Intrigue](web-application/understanding-ssrf-vulnerabilities-and-their-impact/mastering-ssrf-exploits-unraveling-gophers-web-of-intrigue.md)
+    * [📦 XSPA: Navigating the Labyrinth of Port Scanning in SSRF](web-application/understanding-ssrf-vulnerabilities-and-their-impact/xspa-navigating-the-labyrinth-of-port-scanning-in-ssrf.md)
+    * [🎣 Unveiling the Secrets of Cloud Provider Metadata Through SSRF](web-application/understanding-ssrf-vulnerabilities-and-their-impact/unveiling-the-secrets-of-cloud-provider-metadata-through-ssrf.md)
+    * [🔓 Unlocking Forbidden Territories: Mastering Blacklist Bypass Techniques](web-application/understanding-ssrf-vulnerabilities-and-their-impact/unlocking-forbidden-territories-mastering-blacklist-bypass-techniques.md)
+  * [🤖 Mastering Subdomain Takeovers](web-application/mastering-subdomain-takeovers.md)
+  * [⚓ Comprehensive Guide to Web Content Discovery: Tools, Techniques, and Tips](web-application/comprehensive-guide-to-web-content-discovery-tools-techniques-and-tips.md)
+  * [🐝 Exploring XPath Injection: Basics, Techniques, and Creative Exploitation](web-application/exploring-xpath-injection-basics-techniques-and-creative-exploitation.md)
+  * [☢️ Understanding JSON API: A Comprehensive Guide](web-application/understanding-json-api-a-comprehensive-guide/README.md)
+    * [🧞‍♂️ API Security Cheat Sheet PART - 1](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-1.md)
+    * [🧞‍♀️ API Security Cheat Sheet PART - 2](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-2.md)
+    * [🧞‍♀️ API Security Cheat Sheet PART - 3](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-3.md)
+    * [🧞 API Security Cheat Sheet PART - 4](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-4.md)
+    * [🧞‍♂️ API Security Cheat Sheet PART - 5](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-5.md)
+    * [🧞‍♀️ API Security Cheat Sheet PART - 6](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-6.md)
+    * [🧞 API Security Cheat Sheet PART - 7](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-7.md)
+    * [🧞‍♂️ API Security Cheat Sheet PART - 8](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-8.md)
+    * [🧞‍♀️ API Security Cheat Sheet PART - 9](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-9.md)
+    * [🧞 API Security Cheat Sheet PART - 10](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-10.md)
+  * [👿 De-serialization Attack](web-application/de-serialization-attack.md)
+  * [🅰️ Understanding Common API Vulnerabilities: A Deep Dive](web-application/understanding-common-api-vulnerabilities-a-deep-dive.md)
+  * [Technology Identification](web-application/technology-identification.md)
+  * [Link Extraction Tools](web-application/link-extraction-tools.md)
+  * [Parameter and Web Fuzzing Tools](web-application/parameter-and-web-fuzzing-tools.md)
+  * [Screenshots](web-application/screenshots.md)
+  * [File Inclusion,CSRF Injection,Directory Traversal](web-application/file-inclusion-csrf-injection-directory-traversal.md)
+  * [GraphQL Injection,Insecure Deserialization,Header Injection](web-application/graphql-injection-insecure-deserialization-header-injection.md)
+  * [Exploitation Tools Categorized by Vulnerability Type](web-application/exploitation-tools-categorized-by-vulnerability-type.md)
+  * [Insecure Direct Object References, Open Redirect, Request Smuggling](web-application/insecure-direct-object-references-open-redirect-request-smuggling.md)
+  * [Disclosed Reports 📝](web-application/disclosed-reports.md)
+  * [Web Hack Tools](web-application/web-hack-tools.md)
+* [Network security](network-security/README.md)
+  * [🏇 A Journey into SMB Enumeration (Port 139, 445)](network-security/a-journey-into-smb-enumeration-port-139-445/README.md)
+    * [SMB Checklist](network-security/a-journey-into-smb-enumeration-port-139-445/smb-checklist.md)
+  * [🎆 SNMP (Simple Network Management Protocol) Notes](network-security/snmp-simple-network-management-protocol-notes.md)
+* [The $15,000 Midnight Discovery: How a Routine Scan Uncovered CrushFTP's Critical Flaw](the-usd15-000-midnight-discovery-how-a-routine-scan-uncovered-crushftps-critical-flaw.md)
+* [CVE-2024-21626: runc Container Breakout Vulnerability](cve-2024-21626-runc-container-breakout-vulnerability.md)
+* [✳️ Mastering the Art of Writing Clear and Effective Vulnerabilities Report](mastering-the-art-of-writing-clear-and-effective-vulnerabilities-report.md)
 
-## ☁️ Cloud Security
-- [CVE-2024-21626: Container Escape](cloud-testing/CVE-2024-21626-container-escape.md)
+## 🐦 Twitter
 
-## 📋 Methodologies
-- [How to Find & Use Exploits Effectively](methodologies/how-to-find-and-use-exploits-effectively-20260323.md)
+* [✖️ Thread by @ArchAngelDDay on Thread Reader App](twitter/thread-by-archangeldday-on-thread-reader-app/README.md)
+  * [✖️ Tips and Tricks From Twitter](twitter/thread-by-archangeldday-on-thread-reader-app/tips-and-tricks-from-twitter.md)
+  * [✖️ people to follow on twitter](https://twitter.com/PhillipWylie/status/1682404653391118337?t=Fev86JGEbHFWv66CL8_7Jw\&s=08)
 
-## 📱 Mobile Testing
-- [Coming Soon](mobile-testing/)
+***
 
-## 🚀 Advanced Topics
-- [Prompt Injection 101](advanced-topics/prompt-injection-101.md)
-- [Prompt Injection Deep Dive](advanced-topics/prompt-injection-20260316.md)
-- [PowerShell for Pentesters](advanced-topics/powershell-for-pentesters:-one-liners-and-techniques-20260323.md)
-- [AI Changed My Workflow](advanced-topics/ai-changed-my-workflow.md)
-- [Open Source AI Tools Guide](advanced-topics/open-source-ai-tools-guide.md)
+* [🌆 Subdomain Enumeration](subdomain-enumeration/README.md)
+  * [Subdomains Enumeration tools](subdomain-enumeration/subdomains-enumeration-tools.md)
+* [☁️ Cloud Pen-Testing Checklist](cloud-pen-testing-checklist/README.md)
+  * [Cloud Pen-testing Part-1](cloud-pen-testing-checklist/cloud-pen-testing-part-1.md)
+  * [Cloud Pen-testing Part-2](cloud-pen-testing-checklist/cloud-pen-testing-part-2.md)
+  * [Cloud Pen-testing Part -3](cloud-pen-testing-checklist/cloud-pen-testing-part-3.md)
+  * [Cloud Pen-testing Part -4](cloud-pen-testing-checklist/cloud-pen-testing-part-4.md)
+  * [Cloud Pen-testing Part -5](cloud-pen-testing-checklist/cloud-pen-testing-part-5.md)
+  * [Cloud Pen-testing Part -6](cloud-pen-testing-checklist/cloud-pen-testing-part-6.md)
 
-## 🎨 Visual Assets
-- [Diagrams & Images](images/README.md)
+## ⚒️ Tools
 
+* [The $8,000 Subdomain That Changed Everything: A Bug Hunter's Journey with Amass](tools/the-usd8-000-subdomain-that-changed-everything-a-bug-hunters-journey-with-amass.md)
+* [Nuclei - The Vulnerability Scanner That Changed Bug Bounty](tools/nuclei-the-vulnerability-scanner-that-changed-bug-bounty.md)
+* [Supercharge Your Bug Bounty Hunting with Claude Security Skills: The Complete Guide](tools/supercharge-your-bug-bounty-hunting-with-claude-security-skills-the-complete-guide.md)
+* [🔑 Nmap's NSE Scripts for Ethical Password Testing](tools/nmaps-nse-scripts-for-ethical-password-testing.md)
+* [🪓 Axion-Scan](tools/axion-scan.md)
+* [🕶️ DalFox Tool](tools/dalfox-tool.md)
+
+***
+
+* [Shodan Pentesting Guide](shodan-pentesting-guide/README.md)
+  * [Shodan Dorks](shodan-pentesting-guide/shodan-dorks.md)
+* [🇬🇹 Hacking Templates](hacking-templates.md)
+* [👻 Cheat-sheet's](cheat-sheets/README.md)
+  * [Bug-Bounty Cheatsheet](cheat-sheets/bug-bounty-cheatsheet.md)
+  * [Linux-Cheatsheet](cheat-sheets/linux-cheatsheet.md)
+  * [Windows-Cheatsheet](cheat-sheets/windows-cheatsheet.md)
+  * [Hacking-Cheatsheet](cheat-sheets/hacking-cheatsheet.md)
+* [Medium and other articles links](medium-and-other-articles-links.md)
+
+## ❗ Exploitation
+
+* [Exploitation notes](exploitation/exploitation-notes.md)
+* [Post Exploitation](exploitation/post-exploitation.md)
+
+***
+
+* [❓ Interview Question](interview-question/README.md)
+  * [Question and Answers](interview-question/question-and-answers.md)
+* [Import](import/README.md)
+  * [1729001364016279874](import/1729001364016279874.md)
+* [Import](import-1/README.md)
+  * [1729001364016279874](import-1/1729001364016279874.md)
