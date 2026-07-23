@@ -1,0 +1,334 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent",
+  "elements": [
+    {
+      "type": "text",
+      "id": "t4_title",
+      "x": 140,
+      "y": 10,
+      "width": 520,
+      "height": 30,
+      "text": "Bug Bounty Tool Ecosystem: The Big 3",
+      "fontSize": 24,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "originalText": "Bug Bounty Tool Ecosystem: The Big 3",
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "nuclei",
+      "x": 30,
+      "y": 65,
+      "width": 200,
+      "height": 140,
+      "roundness": {
+        "type": 3
+      },
+      "backgroundColor": "#a5d8ff",
+      "fillStyle": "solid",
+      "strokeWidth": 3,
+      "boundElements": [
+        {
+          "id": "t_nuclei",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_nuclei",
+      "x": 35,
+      "y": 70,
+      "width": 190,
+      "height": 20,
+      "text": "Nuclei\n\nCVEs, misconfigs\nexposed panels\ndefault creds\n\n1 hour to learn",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "nuclei",
+      "originalText": "Nuclei\n\nCVEs, misconfigs\nexposed panels\ndefault creds\n\n1 hour to learn",
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "ffuf",
+      "x": 280,
+      "y": 65,
+      "width": 200,
+      "height": 140,
+      "roundness": {
+        "type": 3
+      },
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "strokeWidth": 3,
+      "boundElements": [
+        {
+          "id": "t_ffuf",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_ffuf",
+      "x": 285,
+      "y": 70,
+      "width": 190,
+      "height": 20,
+      "text": "ffuf\n\nBrute-force everything\ndirs, params, vhosts\nPOST bodies\n\n2 hours to learn",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "ffuf",
+      "originalText": "ffuf\n\nBrute-force everything\ndirs, params, vhosts\nPOST bodies\n\n2 hours to learn",
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "katana",
+      "x": 530,
+      "y": 65,
+      "width": 210,
+      "height": 140,
+      "roundness": {
+        "type": 3
+      },
+      "backgroundColor": "#b2f2bb",
+      "fillStyle": "solid",
+      "strokeWidth": 3,
+      "boundElements": [
+        {
+          "id": "t_katana",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_katana",
+      "x": 535,
+      "y": 70,
+      "width": 200,
+      "height": 20,
+      "text": "katana\n\nCrawls like Google\nJS-hidden endpoints\nforms + params\n\n30 min to learn",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "katana",
+      "originalText": "katana\n\nCrawls like Google\nJS-hidden endpoints\nforms + params\n\n30 min to learn",
+      "autoResize": true
+    },
+    {
+      "type": "arrow",
+      "id": "a_kn",
+      "x": 230,
+      "y": 100,
+      "width": 50,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          50,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeColor": "#1971c2",
+      "boundElements": [
+        {
+          "id": "t_akn",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_akn",
+      "x": 235,
+      "y": 78,
+      "width": 40,
+      "height": 16,
+      "text": "feeds",
+      "fontSize": 14,
+      "fontFamily": 1,
+      "strokeColor": "#868e96",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "a_kn",
+      "originalText": "feeds",
+      "autoResize": true
+    },
+    {
+      "type": "arrow",
+      "id": "a_nf",
+      "x": 480,
+      "y": 100,
+      "width": 50,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          50,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeColor": "#1971c2",
+      "boundElements": [
+        {
+          "id": "t_anf",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_anf",
+      "x": 485,
+      "y": 78,
+      "width": 40,
+      "height": 16,
+      "text": "fuzz",
+      "fontSize": 14,
+      "fontFamily": 1,
+      "strokeColor": "#868e96",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "a_nf",
+      "originalText": "fuzz",
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "pipeline",
+      "x": 130,
+      "y": 250,
+      "width": 520,
+      "height": 55,
+      "roundness": {
+        "type": 3
+      },
+      "backgroundColor": "#fff3bf",
+      "fillStyle": "solid",
+      "boundElements": [
+        {
+          "id": "t_pipeline",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_pipeline",
+      "x": 135,
+      "y": 258,
+      "width": 510,
+      "height": 20,
+      "text": "Full Pipeline: subfinder -> httpx -> katana -> nuclei -> ffuf | 15 minutes",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "pipeline",
+      "originalText": "Full Pipeline: subfinder -> httpx -> katana -> nuclei -> ffuf | 15 minutes",
+      "autoResize": true
+    },
+    {
+      "type": "arrow",
+      "id": "a_np",
+      "x": 130,
+      "y": 205,
+      "width": 0,
+      "height": 40,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeColor": "#868e96",
+      "strokeStyle": "dotted"
+    },
+    {
+      "type": "arrow",
+      "id": "a_fp",
+      "x": 380,
+      "y": 205,
+      "width": 0,
+      "height": 40,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeColor": "#868e96",
+      "strokeStyle": "dotted"
+    },
+    {
+      "type": "arrow",
+      "id": "a_kp",
+      "x": 635,
+      "y": 205,
+      "width": 0,
+      "height": 40,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeColor": "#868e96",
+      "strokeStyle": "dotted"
+    },
+    {
+      "type": "text",
+      "id": "n4",
+      "x": 140,
+      "y": 330,
+      "width": 500,
+      "height": 20,
+      "text": "Master these 3 before installing anything else. They find 80% of bugs.",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#868e96",
+      "originalText": "Master these 3 before installing anything else. They find 80% of bugs.",
+      "autoResize": true
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}

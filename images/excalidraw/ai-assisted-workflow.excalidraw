@@ -1,0 +1,334 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent",
+  "elements": [
+    {
+      "type": "text",
+      "id": "t3_title",
+      "x": 120,
+      "y": 10,
+      "width": 540,
+      "height": 30,
+      "text": "AI-Assisted Bug Hunting Workflow",
+      "fontSize": 24,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "originalText": "AI-Assisted Bug Hunting Workflow",
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "s1",
+      "x": 30,
+      "y": 65,
+      "width": 160,
+      "height": 80,
+      "roundness": {
+        "type": 3
+      },
+      "backgroundColor": "#a5d8ff",
+      "fillStyle": "solid",
+      "boundElements": [
+        {
+          "id": "t_s1",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_s1",
+      "x": 35,
+      "y": 70,
+      "width": 150,
+      "height": 20,
+      "text": "Recon Triage\n\n30min -> 3min",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "s1",
+      "originalText": "Recon Triage\n\n30min -> 3min",
+      "autoResize": true
+    },
+    {
+      "type": "arrow",
+      "id": "a3_1",
+      "x": 190,
+      "y": 105,
+      "width": 30,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          30,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeColor": "#1971c2"
+    },
+    {
+      "type": "rectangle",
+      "id": "s2",
+      "x": 220,
+      "y": 65,
+      "width": 160,
+      "height": 80,
+      "roundness": {
+        "type": 3
+      },
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "boundElements": [
+        {
+          "id": "t_s2",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_s2",
+      "x": 225,
+      "y": 70,
+      "width": 150,
+      "height": 20,
+      "text": "Code Review\n\n2hr -> 20min",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "s2",
+      "originalText": "Code Review\n\n2hr -> 20min",
+      "autoResize": true
+    },
+    {
+      "type": "arrow",
+      "id": "a3_2",
+      "x": 380,
+      "y": 105,
+      "width": 30,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          30,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeColor": "#7048e8"
+    },
+    {
+      "type": "rectangle",
+      "id": "s3",
+      "x": 410,
+      "y": 65,
+      "width": 160,
+      "height": 80,
+      "roundness": {
+        "type": 3
+      },
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "boundElements": [
+        {
+          "id": "t_s3",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_s3",
+      "x": 415,
+      "y": 70,
+      "width": 150,
+      "height": 20,
+      "text": "Payload Gen\n\n20min -> 2min",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "s3",
+      "originalText": "Payload Gen\n\n20min -> 2min",
+      "autoResize": true
+    },
+    {
+      "type": "arrow",
+      "id": "a3_3",
+      "x": 570,
+      "y": 105,
+      "width": 30,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          30,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeColor": "#f08c00"
+    },
+    {
+      "type": "rectangle",
+      "id": "s4",
+      "x": 600,
+      "y": 65,
+      "width": 160,
+      "height": 80,
+      "roundness": {
+        "type": 3
+      },
+      "backgroundColor": "#b2f2bb",
+      "fillStyle": "solid",
+      "boundElements": [
+        {
+          "id": "t_s4",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_s4",
+      "x": 605,
+      "y": 70,
+      "width": 150,
+      "height": 20,
+      "text": "Report Writing\n\n45min -> 10min",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "s4",
+      "originalText": "Report Writing\n\n45min -> 10min",
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "tools_box",
+      "x": 120,
+      "y": 195,
+      "width": 520,
+      "height": 60,
+      "roundness": {
+        "type": 3
+      },
+      "backgroundColor": "#c3fae8",
+      "fillStyle": "solid",
+      "boundElements": [
+        {
+          "id": "t_tools_box",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_tools_box",
+      "x": 125,
+      "y": 200,
+      "width": 510,
+      "height": 20,
+      "text": "LLM Stack: Claude (analysis) + ChatGPT (payloads) + Copilot (scripts) | $20/mo",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#1e1e1e",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "tools_box",
+      "originalText": "LLM Stack: Claude (analysis) + ChatGPT (payloads) + Copilot (scripts) | $20/mo",
+      "autoResize": true
+    },
+    {
+      "type": "diamond",
+      "id": "r3",
+      "x": 270,
+      "y": 295,
+      "width": 220,
+      "height": 70,
+      "backgroundColor": "#fff3bf",
+      "fillStyle": "solid",
+      "strokeColor": "#2f9e44",
+      "strokeWidth": 3,
+      "boundElements": [
+        {
+          "id": "t_r3",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "t_r3",
+      "x": 275,
+      "y": 310,
+      "width": 210,
+      "height": 20,
+      "text": "60% Faster | 3x Findings",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "strokeColor": "#2f9e44",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "r3",
+      "originalText": "60% Faster | 3x Findings",
+      "autoResize": true
+    },
+    {
+      "type": "arrow",
+      "id": "a_st",
+      "x": 110,
+      "y": 145,
+      "width": 0,
+      "height": 40,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeColor": "#868e96",
+      "strokeStyle": "dotted"
+    },
+    {
+      "type": "text",
+      "id": "n3",
+      "x": 120,
+      "y": 390,
+      "width": 540,
+      "height": 20,
+      "text": "AI handles the grunt work. You show up fresh for the parts that need a brain.",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "strokeColor": "#868e96",
+      "originalText": "AI handles the grunt work. You show up fresh for the parts that need a brain.",
+      "autoResize": true
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}
