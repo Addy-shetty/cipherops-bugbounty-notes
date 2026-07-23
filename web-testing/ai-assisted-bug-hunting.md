@@ -1,6 +1,6 @@
 # AI Bug Bounty Hunting: How I Use LLMs to Find Vulnerabilities 3x Faster
 
-![AI-Assisted Bug Hunting Workflow](../images/excalidraw/ai-assisted-workflow.excalidraw)
+![AI-Assisted Bug Hunting Workflow](../../images/web-testing/ai-assisted-workflow.excalidraw)
 
 *View: drag onto [excalidraw.com](https://excalidraw.com)*
 

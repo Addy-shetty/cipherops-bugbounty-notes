@@ -1,6 +1,6 @@
 # Best Bug Bounty Tools 2026: 3 Tools That Find 80% of Vulnerabilities (With Scripts)
 
-![Bug Bounty Tool Ecosystem](../images/excalidraw/three-tools-ecosystem.excalidraw)
+![Bug Bounty Tool Ecosystem](../../images/tool-deep-dives/three-tools-ecosystem.excalidraw)
 
 *View: drag onto [excalidraw.com](https://excalidraw.com)*
 
