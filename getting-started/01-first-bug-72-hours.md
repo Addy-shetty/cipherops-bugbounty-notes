@@ -1,4 +1,10 @@
-# I made $500 from my first bug. Here's exactly how.
+# How to Start Bug Bounty Hunting: I Made $500 From My First Bug (72-Hour Roadmap)
+
+**A step-by-step bug bounty beginner guide with copy-paste commands. No theory — just what worked.**
+
+*By CipherOps | Updated July 2026*
+
+---
 
 You don't need 50 tools. You don't need to "understand everything." You need 3 days and the willingness to look stupid.
 
@@ -36,7 +42,7 @@ That report? Triaged to resolved in 48 hours. No money, but it taught me the pat
 
 ---
 
-## Day 3: from free to paid
+## Day 3: from free to paid program
 
 Same process, different target. This time a paid program:
 
@@ -48,7 +54,7 @@ Found CVE-2021-41773 on a dev server someone forgot about. $500. Total active ti
 
 ---
 
-## The pattern
+## The bug bounty beginner's pattern
 
 | Phase | Time | What |
 |-------|------|------|
@@ -69,7 +75,7 @@ Stuff that works:
 
 ---
 
-## Your first 72 hours
+## Your first 72 hours as a bug bounty hunter
 
 | Day | Goal | Action |
 |-----|------|--------|
@@ -79,10 +85,10 @@ Stuff that works:
 
 ---
 
-## Related
-- [The $8,000 subdomain: recon that finds what others miss](../reconnaissance/08k-subdomain-advanced-recon.md) — next level recon
-- [3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md) — master the pipeline
-- [AI-assisted bug hunting](../web-testing/ai-assisted-bug-hunting.md) — use LLMs to go faster
+## Related bug bounty guides
+- [Advanced recon techniques: how I found an $8,000 subdomain](../reconnaissance/08k-subdomain-advanced-recon.md)
+- [Best bug bounty tools: 3 tools that find 80% of vulnerabilities](../tool-deep-dives/three-tools-find-bugs.md)
+- [AI bug bounty hunting: use LLMs to find bugs 3x faster](../web-testing/ai-assisted-bug-hunting.md)
 
 *Part of [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/).*
 

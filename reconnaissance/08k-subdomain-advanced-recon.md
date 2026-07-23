@@ -1,12 +1,18 @@
-# The $8,000 subdomain: how recon finds what everyone else misses
+# Advanced Subdomain Enumeration: The $8,000 Bug Bounty Recon Technique That Finds What Others Miss
 
-I was stuck. Three months in, $850 total. Every report I filed was a duplicate.
+**Most hunters run subfinder and stop. Here's how advanced recon techniques find subdomains nobody else checks — with copy-paste commands.**
 
-The problem wasn't my exploit skills. It was that I was scanning the same targets as everyone else with the same tools. The money isn't in the obvious subdomains. It's in the ones nobody thinks to look for.
+*By CipherOps | Updated July 2026*
 
 ---
 
-## What basic recon misses
+I was stuck. Three months in, $850 total. Every report I filed was a duplicate.
+
+The problem wasn't my exploit skills. It was that I was scanning the same targets as everyone else with the same tools. The high-value bugs aren't on the main domain. They're on forgotten infrastructure.
+
+---
+
+## What basic subdomain enumeration misses
 
 Standard flow:
 
@@ -21,13 +27,13 @@ What it skips:
 - Cloud resources created for a sprint in 2019, abandoned, still running
 - Subdomains that don't appear in cert logs at all
 
-The high-value bugs live here. Not on the main domain. On the thing someone built three years ago and forgot about.
+These are where the $8,000 bugs live.
 
 ---
 
-## The stack
+## Advanced recon: the full stack
 
-### Beyond cert transparency
+### Phase 1: Beyond certificate transparency
 
 ```bash
 subfinder -d target.com -o phase1_subs.txt
@@ -40,9 +46,7 @@ gobuster dns -d target.com -w ~/wordlists/subdomains-top1m.txt \
 cat phase1_subs.txt phase1_brute.txt | sort -u > all_subs.txt
 ```
 
-Brute forcing subdomains is boring. It's also where the duplicate rate drops to near zero.
-
-### Cloud resources
+### Phase 2: Cloud enumeration
 
 ```bash
 cloud_enum -k target -k target-backup -k target-dev \
@@ -53,24 +57,24 @@ This found me a forgotten S3 bucket named `target-backup-prod`. List permissions
 
 Four years. Nobody reported it. Nobody even looked.
 
-### Unusual ports
+### Phase 3: Full port scanning
 
 ```bash
 naabu -l all_subs.txt -p 1-65535 -rate 1000 -o open_ports.txt
 grep -v ":80\|:443\|:8080\|:8443" open_ports.txt > unusual_ports.txt
 ```
 
-Everyone scans 80 and 443. Few scan 8443. Almost nobody scans all 65,535. The services on weird ports tend to be unmonitored and unpatched.
+Everyone scans 80 and 443. Almost nobody scans all 65,535. The services on weird ports tend to be unmonitored and unpatched.
 
 ---
 
-## The bug
+## The bug bounty payout
 
 That S3 bucket? $8,000. Tuesday 2:47 AM discovery, triaged by 9:30 AM, resolved Thursday.
 
 ---
 
-## Tool breakdown
+## Recon tool comparison
 
 | Tool | What it finds | Who uses it | Real value |
 |------|--------------|-------------|------------|
@@ -87,32 +91,33 @@ The pattern is not subtle. Tools in the "everyone" column find the $500 bugs. Th
 
 ```bash
 #!/bin/bash
+# advanced-recon.sh — Full recon pipeline for bug bounty
 TARGET=$1
 mkdir recon-$TARGET && cd recon-$TARGET
 
-echo "[*] Standard enum"
+echo "[*] Standard subdomain enumeration"
 subfinder -d $TARGET -o 1_subs.txt
 assetfinder --subs-only $TARGET >> 1_subs.txt
 
-echo "[*] Brute force (this is where the money is)"
+echo "[*] DNS brute force (this is where the hidden subdomains are)"
 gobuster dns -d $TARGET -w ~/wordlists/subdomains-small.txt -t 100 -o 2_brute.txt
 
-echo "[*] Cloud resources"
+echo "[*] Cloud resource enumeration"
 cloud_enum -k $TARGET -k $TARGET-backup -k $TARGET-dev -k $TARGET-staging
 
 echo "[*] Full port scan"
 cat 1_subs.txt 2_brute.txt | sort -u | httpx -o 3_live.txt
 naabu -l 3_live.txt -p 1-65535 -rate 1000 -o 4_ports.txt
 
-echo "[+] Check 4_ports.txt for weird ports and cloud_enum for buckets"
+echo "[+] Done. Check 4_ports.txt for unusual ports and cloud_enum for exposed buckets"
 ```
 
 ---
 
-## Related
-- [I made $500 from my first bug](../getting-started/01-first-bug-72-hours.md) — start here
-- [3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md) — the pipeline
-- [AI-assisted bug hunting](../web-testing/ai-assisted-bug-hunting.md) — automate the boring parts
+## Related bug bounty recon guides
+- [How to start bug bounty: $500 from my first bug in 72 hours](../getting-started/01-first-bug-72-hours.md)
+- [Best bug bounty tools: 3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md)
+- [AI bug bounty workflow: automate recon with LLMs](../web-testing/ai-assisted-bug-hunting.md)
 
 *Part of [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/).*
 

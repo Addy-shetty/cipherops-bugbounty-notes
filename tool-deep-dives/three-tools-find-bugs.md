@@ -1,14 +1,20 @@
-# 3 tools that find 80% of bugs
+# Best Bug Bounty Tools 2026: 3 Tools That Find 80% of Vulnerabilities (With Scripts)
 
-Every tools article is the same: 47 tools, 12 categories, infinite stars. You bookmark it, install 8, use 2, forget the rest.
+**Master Nuclei, ffuf, and katana — the only bug bounty tools most hunters need. Beginner to pro pipeline with copy-paste scripts.**
 
-You need 3. Master these and you have 80% of what most bug bounty hunters use day to day.
+*By CipherOps | Updated July 2026*
 
 ---
 
-## Nuclei
+Every tools article is the same: 47 tools, 12 categories, infinite stars. You bookmark it, install 8, use 2, forget the rest.
 
-Automated vulnerability scanning. Pre-built templates for CVEs, misconfigurations, exposed panels, default credentials.
+You need 3. These find 80% of what most bug bounty hunters catch in a typical engagement.
+
+---
+
+## Nuclei: automated vulnerability scanning
+
+Pre-built templates for CVEs, misconfigurations, exposed panels, default credentials.
 
 ### Beginner
 
@@ -52,9 +58,9 @@ nuclei -l live.txt -t check.yaml
 
 ---
 
-## ffuf
+## ffuf: web fuzzing tool
 
-Brute-forces anything. Directories, parameters, subdomains, POST bodies. If it takes a wordlist, ffuf does it.
+Brute-forces directories, parameters, subdomains, POST bodies. If it takes a wordlist, ffuf handles it.
 
 ### Beginner
 
@@ -79,19 +85,19 @@ ffuf -u https://target.com \
 ### Pro
 
 ```bash
-# Find params, then fuzz values
+# Find parameters, then fuzz their values
 ffuf -u 'https://target.com/api/user?FUZZ=1' \
   -w params.txt -fc 400,404 -o found.json
 ffuf -u 'https://target.com/api/user?id=FUZZ' \
   -w sqli.txt -fc 400
 
-# Stealthy
+# Stealthy scanning
 ffuf -u https://target.com/FUZZ -w wordlist.txt -p 0.5 -t 5
 ```
 
 ---
 
-## katana
+## katana: web crawling for bug bounty
 
 Crawls like a search engine. Finds endpoints, forms, and parameters hidden behind JavaScript.
 
@@ -116,7 +122,7 @@ katana -u https://target.com -d 3 -silent | httpx -o live-crawled.txt
 echo https://target.com | katana -d 5 -jc -kf all -c 50 \
   -silent | grep "?" | uro | sort -u > all_params.txt
 
-# Crawl JS files, grep for secrets
+# Crawl JS files, extract secrets
 katana -u https://target.com -d 3 -jc -silent \
   -em js | while read url; do
     curl -s "$url" | grep -E "(api[_-]?key|secret|token|password)"
@@ -125,22 +131,23 @@ katana -u https://target.com -d 3 -jc -silent \
 
 ---
 
-## The full pipeline
+## Full bug bounty pipeline script
 
 ```bash
 #!/bin/bash
+# quick-hunt.sh — Full bug bounty scan in 15 minutes
 TARGET=$1
 
-echo "[1/4] Subdomains..."
+echo "[1/4] Subdomain enumeration..."
 subfinder -d $TARGET | httpx -silent > live.txt
 
-echo "[2/4] Crawling..."
+echo "[2/4] Web crawling..."
 cat live.txt | katana -d 3 -jc -silent | grep "?" | sort -u > endpoints.txt
 
-echo "[3/4] CVEs..."
+echo "[3/4] CVE scanning..."
 nuclei -l live.txt -t cves/ -silent > cve-results.txt
 
-echo "[4/4] Fuzzing..."
+echo "[4/4] Endpoint fuzzing..."
 cat endpoints.txt | while read url; do
   ffuf -u "$url" -w sqli-small.txt -fc 404 -silent
 done > fuzz-results.txt
@@ -148,23 +155,23 @@ done > fuzz-results.txt
 
 ---
 
-## Comparison
+## Bug bounty tools comparison
 
 | Tool | Finds | Learn time | Priority |
 |------|-------|-----------|----------|
-| Nuclei | Known vulns, CVEs | 1 hour | First |
-| ffuf | Hidden endpoints, params | 2 hours | Second |
-| katana | JS-hidden routes | 30 min | Second |
+| Nuclei | Known vulns, CVEs, misconfigs | 1 hour | First |
+| ffuf | Hidden endpoints, parameters | 2 hours | Second |
+| katana | JS-hidden routes, forms | 30 min | Second |
 | Others | Optimization | Varies | Later |
 
-When you want to install a new tool, ask: "Can one of these 3 already do this?" The answer is yes more often than you'd think.
+Before installing a new tool, check if one of these 3 already does what you need.
 
 ---
 
-## Related
-- [I made $500 from my first bug](../getting-started/01-first-bug-72-hours.md) — see the pipeline in action
-- [The $8,000 subdomain](../reconnaissance/08k-subdomain-advanced-recon.md) — recon techniques
-- [AI-assisted bug hunting](../web-testing/ai-assisted-bug-hunting.md) — add AI to this stack
+## Related bug bounty guides
+- [How to start bug bounty: $500 first bug in 72 hours](../getting-started/01-first-bug-72-hours.md)
+- [Advanced reconnaissance: $8,000 subdomain techniques](../reconnaissance/08k-subdomain-advanced-recon.md)
+- [AI bug bounty workflow: LLM prompt library](../web-testing/ai-assisted-bug-hunting.md)
 
 *Part of [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/).*
 
