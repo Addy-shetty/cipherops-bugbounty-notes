@@ -114,6 +114,11 @@ echo "[+] Done. Check 4_ports.txt for unusual ports and cloud_enum for exposed b
 
 ---
 
+
+
+
+*View this diagram: drag the .excalidraw file onto [excalidraw.com](https://excalidraw.com)*
+
 ## Related bug bounty recon guides
 - [How to start bug bounty: $500 from my first bug in 72 hours](../getting-started/01-first-bug-72-hours.md)
 - [Best bug bounty tools: 3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md)

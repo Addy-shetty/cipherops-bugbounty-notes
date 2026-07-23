@@ -85,6 +85,11 @@ Stuff that works:
 
 ---
 
+
+
+
+*View this diagram: drag the .excalidraw file onto [excalidraw.com](https://excalidraw.com)*
+
 ## Related bug bounty guides
 - [Advanced recon techniques: how I found an $8,000 subdomain](../reconnaissance/08k-subdomain-advanced-recon.md)
 - [Best bug bounty tools: 3 tools that find 80% of vulnerabilities](../tool-deep-dives/three-tools-find-bugs.md)

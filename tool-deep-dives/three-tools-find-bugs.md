@@ -168,6 +168,11 @@ Before installing a new tool, check if one of these 3 already does what you need
 
 ---
 
+
+
+
+*View this diagram: drag the .excalidraw file onto [excalidraw.com](https://excalidraw.com)*
+
 ## Related bug bounty guides
 - [How to start bug bounty: $500 first bug in 72 hours](../getting-started/01-first-bug-72-hours.md)
 - [Advanced reconnaissance: $8,000 subdomain techniques](../reconnaissance/08k-subdomain-advanced-recon.md)

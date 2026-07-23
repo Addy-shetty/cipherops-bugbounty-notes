@@ -146,6 +146,11 @@ None of this replaces knowing what you're doing. What it replaces is the 45 minu
 
 ---
 
+
+
+
+*View this diagram: drag the .excalidraw file onto [excalidraw.com](https://excalidraw.com)*
+
 ## Related bug bounty + AI guides
 - [Best bug bounty tools: 3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md)
 - [Advanced recon techniques: $8,000 subdomain story](../reconnaissance/08k-subdomain-advanced-recon.md)
