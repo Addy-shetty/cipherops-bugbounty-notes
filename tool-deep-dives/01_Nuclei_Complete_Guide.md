@@ -739,3 +739,16 @@ cat team-results.json | jq '.[] | {template, host, severity}' > summary.txt
 **Author:** Your Name  
 **Community:** [ProjectDiscovery](https://projectdiscovery.io)  
 **License:** This guide is free to share with attribution
+
+
+---
+
+## 📚 Related Guides
+- 🛠️ [Nuclei Complete Guide](01_Nuclei_Complete_Guide.md) — Automated vuln scanning
+- 🔍 [Reconnaissance](../reconnaissance/01_AI_Powered_Reconnaissance.md) — Find targets first
+- 🌐 [Web Testing](../web-testing/sql-injection-20260316.md) — Next: exploit what you find
+
+---
+
+*Part of the [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/) — your guide from zero to first bounty.*
+

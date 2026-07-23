@@ -1,0 +1,130 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "type": "rectangle",
+      "version": 1,
+      "id": "box1",
+      "x": 100,
+      "y": 50,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#4CAF50",
+      "strokeColor": "#2E7D32",
+      "fillStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "text": "Install Nuclei"
+    },
+    {
+      "type": "rectangle",
+      "id": "box2",
+      "x": 100,
+      "y": 150,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#2196F3",
+      "strokeColor": "#1565C0",
+      "text": "Update Templates"
+    },
+    {
+      "type": "rectangle",
+      "id": "box3",
+      "x": 100,
+      "y": 250,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#FF9800",
+      "strokeColor": "#E65100",
+      "text": "Run Scan"
+    },
+    {
+      "type": "rectangle",
+      "id": "box4",
+      "x": 100,
+      "y": 350,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#9C27B0",
+      "strokeColor": "#6A1B9A",
+      "text": "Analyze Results"
+    },
+    {
+      "type": "rectangle",
+      "id": "box5",
+      "x": 100,
+      "y": 450,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#F44336",
+      "strokeColor": "#C62828",
+      "text": "Submit Bug!"
+    },
+    {
+      "type": "arrow",
+      "id": "arrow1",
+      "x": 200,
+      "y": 110,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "id": "arrow2",
+      "x": 200,
+      "y": 210,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "id": "arrow3",
+      "x": 200,
+      "y": 310,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "id": "arrow4",
+      "x": 200,
+      "y": 410,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ]
+    }
+  ]
+}

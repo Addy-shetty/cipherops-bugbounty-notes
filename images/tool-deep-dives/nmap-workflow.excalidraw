@@ -1,0 +1,65 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "box1",
+      "x": 100,
+      "y": 50,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#4CAF50",
+      "strokeColor": "#2E7D32",
+      "fillStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "text": "Host Discovery (-sn)"
+    },
+    {
+      "type": "rectangle",
+      "id": "box2",
+      "x": 100,
+      "y": 150,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#2196F3",
+      "strokeColor": "#1565C0",
+      "text": "Port Scan (-p-)"
+    },
+    {
+      "type": "rectangle",
+      "id": "box3",
+      "x": 100,
+      "y": 250,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#FF9800",
+      "strokeColor": "#E65100",
+      "text": "Service Detection (-sV)"
+    },
+    {
+      "type": "rectangle",
+      "id": "box4",
+      "x": 100,
+      "y": 350,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#9C27B0",
+      "strokeColor": "#6A1B9A",
+      "text": "Script Scan (-sC)"
+    },
+    {
+      "type": "rectangle",
+      "id": "box5",
+      "x": 100,
+      "y": 450,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#F44336",
+      "strokeColor": "#C62828",
+      "text": "Exploit Targets!"
+    }
+  ]
+}

@@ -606,3 +606,16 @@ cat dead_subdomains.txt | dnsx -silent > resurrected.txt
 **Now go find those hidden subdomains! The best bugs are hiding where nobody looks.** 🔍🐛
 
 *Last Updated: 2026-02-27*
+
+
+---
+
+## 📚 Related Guides
+- 🔍 [50 Copy-Paste Recon Commands](02_50_Copy_Paste_Commands.md) — Quick reference
+- 🔍 [Subdomain Enumeration Deep Dive](03_Subdomain_Enumeration_Deep_Dive.md) — Go deeper
+- 🛠️ [Nmap Complete Guide](../tool-deep-dives/02_Nmap_Complete_Guide.md) — Next: scan your targets
+
+---
+
+*Part of the [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/) — your guide from zero to first bounty.*
+

@@ -657,3 +657,16 @@ After completing recon:
 *Found this helpful? [Share on Twitter](https://twitter.com/intent/tweet?text=Check%20out%20this%20AI-Powered%20Recon%20Guide%20by%20@CipherOps_tech) • [Contribute on GitHub](https://github.com/CipherOps/bug-bounty-notes)*
 
 *Last Updated: 2026-02-26 • Contributed by: @CipherOps_tech*
+
+
+---
+
+## 📚 Related Guides
+- 🔍 [50 Copy-Paste Recon Commands](02_50_Copy_Paste_Commands.md) — Quick reference
+- 🔍 [Subdomain Enumeration Deep Dive](03_Subdomain_Enumeration_Deep_Dive.md) — Go deeper
+- 🛠️ [Nmap Complete Guide](../tool-deep-dives/02_Nmap_Complete_Guide.md) — Next: scan your targets
+
+---
+
+*Part of the [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/) — your guide from zero to first bounty.*
+

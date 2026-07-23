@@ -573,3 +573,16 @@ Don't be like me, chasing every shiny object. Focus wins.
 
 *Last Updated: 2026-02-27*  
 *Questions? Hit me up on Twitter @CipherOps_tech*
+
+
+---
+
+## 📚 Related Guides
+- 🚀 [Bug Bounty Platforms Compared](02_Bug_Bounty_Platforms_Compared.md) — Pick the right platform
+- 🛠️ [Setting Up Your Lab](03_Setting_Up_Your_Lab.md) — Build your hacking environment
+- 🔍 [AI-Powered Reconnaissance](../reconnaissance/01_AI_Powered_Reconnaissance.md) — Next: start finding targets
+
+---
+
+*Part of the [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/) — your guide from zero to first bounty.*
+

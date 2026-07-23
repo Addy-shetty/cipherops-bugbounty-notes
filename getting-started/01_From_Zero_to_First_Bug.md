@@ -839,3 +839,16 @@ docker run -d -p 80:80 vulnerables/web-dvwa
 
 *Last Updated: 2026-02-26*  
 *Next: [AI-Powered Reconnaissance →](01_AI_Powered_Reconnaissance.md)*
+
+
+---
+
+## 📚 Related Guides
+- 🚀 [Bug Bounty Platforms Compared](02_Bug_Bounty_Platforms_Compared.md) — Pick the right platform
+- 🛠️ [Setting Up Your Lab](03_Setting_Up_Your_Lab.md) — Build your hacking environment
+- 🔍 [AI-Powered Reconnaissance](../reconnaissance/01_AI_Powered_Reconnaissance.md) — Next: start finding targets
+
+---
+
+*Part of the [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/) — your guide from zero to first bounty.*
+
