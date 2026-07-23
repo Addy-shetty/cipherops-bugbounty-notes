@@ -95,5 +95,7 @@ Stuff that works:
 - [Best bug bounty tools: 3 tools that find 80% of vulnerabilities](../tool-deep-dives/three-tools-find-bugs.md)
 - [AI bug bounty hunting: use LLMs to find bugs 3x faster](../web-testing/ai-assisted-bug-hunting.md)
 
+Also available as PNG: [first-bug-roadmap.png](../images/getting-started/first-bug-roadmap.png) | [bug-types-pyramid.png](../images/getting-started/bug-types-pyramid.png)
+
 *Part of [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/).*
 

@@ -124,5 +124,7 @@ echo "[+] Done. Check 4_ports.txt for unusual ports and cloud_enum for exposed b
 - [Best bug bounty tools: 3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md)
 - [AI bug bounty workflow: automate recon with LLMs](../web-testing/ai-assisted-bug-hunting.md)
 
+Also see: [recon-mindmap.png](../images/reconnaissance/recon-mindmap.png) | [command-categories.png](../images/reconnaissance/command-categories.png)
+
 *Part of [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/).*
 
