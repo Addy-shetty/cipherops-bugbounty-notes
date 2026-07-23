@@ -1,120 +1,88 @@
-# I Made $500 From My First Bug. Here's Exactly How You Can Too.
+# I made $500 from my first bug. Here's exactly how.
 
-**A 72-hour roadmap from zero to first bounty.**
+You don't need 50 tools. You don't need to "understand everything." You need 3 days and the willingness to look stupid.
 
----
-
-I stared at my screen for 6 hours on Day 1 and found nothing. Not a single vulnerability. I had watched every YouTube tutorial, read every "beginner's guide," and still couldn't find a bug to save my life.
-
-By Day 3, I had $500 in my HackerOne account.
-
-Here's exactly what changed — no theory, just what actually worked.
+I spent 6 hours on Day 1 and found absolutely nothing. By Day 3 I had $500 in my HackerOne account. The difference wasn't skill. It was picking one target and not stopping.
 
 ---
 
-## Day 1: Stop Learning. Start Hunting.
+## Day 1: stop learning, start scanning
 
-Most beginners do this backwards. They spend weeks "learning" before ever opening a target. Wrong move.
+Most beginners do this backwards. Weeks of "learning" before ever opening a target.
 
-**What I did instead:**
+Skip that. Pick one VDP on HackerOne. Run three commands:
 
 ```bash
-# Step 1: Pick ONE target. Not ten. One.
-# I chose a VDP (no bounty) program on HackerOne with a wide scope.
-
-# Step 2: Run exactly these 3 tools. No more.
 subfinder -d target.com -o subs.txt
 httpx -l subs.txt -o live.txt
 nuclei -l live.txt -t exposures/ -o findings.txt
 ```
 
-That's it. Three commands. I didn't understand what any of them did yet — I just ran them.
+I didn't understand what nuclei did yet. Didn't matter. It found an exposed `.git` directory on a subdomain nobody else had checked. A P2 bug. Good enough.
 
-**The mistake I almost made:** Installing 50 tools before starting. You need 3. Maybe 5. Everything else is procrastination dressed as preparation.
-
-**Nuclei found an exposed .git directory.** I didn't know what that meant. I googled it. Turns out you can download the entire source code history of a web app from an exposed .git folder. That's a P2 bug on most programs.
-
-I submitted it at 11:47 PM. Went to bed convinced it would be marked "informative."
+I submitted it at 11:47 PM, sure it would be marked "informative" and ignored.
 
 ---
 
-## Day 2: The Bug That Changed Everything
+## Day 2: the bug that actually paid
 
-I woke up to a triaged report. Not "informative." **Triaged.** The program owner had replied:
+Woke up to a triaged report. The program owner wrote back:
 
-> "Nice find. Can you demonstrate impact by extracting any credentials?"
+> "Nice find. Can you demonstrate impact by extracting credentials?"
 
-So I learned `git-dumper` in 30 minutes:
+Took me 30 minutes to figure out git-dumper. Another 15 to find an AWS access key in an `.env` file committed 8 months ago. Full S3 access. From a VDP with no bounty.
 
-```bash
-# Extract the entire repo from exposed .git
-git-dumper https://target.com/.git/ ./leaked-repo/
-
-# Search for secrets
-cd leaked-repo
-grep -r "password\|api_key\|secret\|token" --include="*.{py,js,yml,env,json}" .
-```
-
-Found an AWS access key in a `.env` file that someone committed 8 months ago. Valid. Full S3 bucket access.
-
-That $0 VDP report? Triaged → Resolved in 48 hours.
-
-**The real lesson:** Your first bug teaches you the pattern. The second one is 10x faster. The fifth one is automatic.
+That report? Triaged to resolved in 48 hours. No money, but it taught me the pattern. Your second bug is 10x faster. Your fifth is automatic.
 
 ---
 
-## Day 3: From VDP to Paid Program
+## Day 3: from free to paid
 
-Armed with one resolved report and a pattern that worked, I moved to a paid program.
-
-Same process:
+Same process, different target. This time a paid program:
 
 ```bash
-# Recon — 30 minutes
 subfinder -d target.com | httpx | nuclei -t cves/ -o cves.txt
-
-# Manual check — 45 minutes
-# Pick the interesting findings and verify by hand
-
-# Submit — 15 minutes
-# Screenshots, impact statement, steps to reproduce
 ```
 
-Found a CVE-2021-41773 (Apache path traversal) on a forgotten dev server. $500 bounty. Total time: ~90 minutes.
+Found CVE-2021-41773 on a dev server someone forgot about. $500. Total active time: maybe 90 minutes. Most of that was writing the report.
 
 ---
 
-## The Pattern That Actually Works
+## The pattern
 
-| Phase | Time | Tools |
-|-------|------|-------|
-| **Recon** | 30 min | subfinder → httpx → nuclei |
-| **Verify** | 45 min | Manual testing, curl, browser |
-| **Report** | 15 min | Screenshots, impact, repro steps |
+| Phase | Time | What |
+|-------|------|------|
+| Recon | 30 min | subfinder → httpx → nuclei |
+| Verify | 45 min | Manual check, curl, browser |
+| Report | 15 min | Screenshots, impact, repro steps |
 
-**Stop doing this:**
-- Reading 50 blog posts before starting
-- Installing every tool in the Awesome-Hacking list
-- Waiting until you "understand everything"
-- Switching targets every 20 minutes
+Stuff that wastes your time:
+- Installing 47 tools before running your first scan
+- Reading every beginner guide on Medium
+- Switching targets when you don't find something in 20 minutes
+- Waiting until you "know enough"
 
-**Start doing this:**
-- Pick one target. Stick with it for 3 days.
-- Run 3 tools. Learn what they found.
-- Submit even if you're not sure. Worst case: "informative."
-- Repeat. Speed comes from reps, not research.
+Stuff that works:
+- One target. Three days. Three tools.
+- Submit even if you're not sure. Worst case: "informative"
+- Repeat until it stops feeling scary
 
 ---
 
-## Your First 72 Hours
+## Your first 72 hours
 
 | Day | Goal | Action |
 |-----|------|--------|
-| **Day 1** | Find anything | Run subfinder + httpx + nuclei on one VDP |
-| **Day 2** | Verify one finding | Learn what your nuclei output actually means |
-| **Day 3** | Submit a report | Even if it's "informative." Ship it. |
+| 1 | Find anything | Run the 3-tool pipeline on one VDP |
+| 2 | Verify one finding | Understand what your nuclei output means |
+| 3 | Submit | Even if it's informative. Ship it |
 
 ---
 
-*Part of the [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/) — real techniques from real hunters.*
+## Related
+- [The $8,000 subdomain: recon that finds what others miss](../reconnaissance/08k-subdomain-advanced-recon.md) — next level recon
+- [3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md) — master the pipeline
+- [AI-assisted bug hunting](../web-testing/ai-assisted-bug-hunting.md) — use LLMs to go faster
+
+*Part of [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/).*
 
