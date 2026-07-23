@@ -1,6 +1,6 @@
 # How to Start Bug Bounty Hunting: I Made $500 From My First Bug (72-Hour Roadmap)
 
-![72-Hour Bug Bounty Roadmap](../images/excalidraw/first-bug-72hr-roadmap.excalidraw)
+![72-Hour Bug Bounty Roadmap](../../images/getting-started/first-bug-72hr-roadmap.excalidraw)
 
 *View: drag onto [excalidraw.com](https://excalidraw.com) | PNG: [first-bug-roadmap.png](../images/getting-started/first-bug-roadmap.png)*
 

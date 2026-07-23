@@ -1,6 +1,6 @@
 # Advanced Subdomain Enumeration: The $8,000 Bug Bounty Recon Technique
 
-![Advanced Recon Pipeline](../images/excalidraw/advanced-recon-pipeline.excalidraw)
+![Advanced Recon Pipeline](../../images/reconnaissance/advanced-recon-pipeline.excalidraw)
 
 *View: drag onto [excalidraw.com](https://excalidraw.com) | PNG: [recon-mindmap.png](../images/reconnaissance/recon-mindmap.png)*
 
