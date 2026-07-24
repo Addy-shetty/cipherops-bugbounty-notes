@@ -6,6 +6,7 @@
   * [🌏 Journeying Through the World of Ethical Hacking with Cipherops](readme/journeying-through-the-world-of-ethical-hacking-with-cipher-ops.md)
   * [Bug Bounty Platforms Compared: Where to Hunt in 2026](readme/bug-bounty-platforms-compared-where-to-hunt-in-2026.md)
   * [From Zero to First Bug: The Complete Beginner's Guide](readme/from-zero-to-first-bug-the-complete-beginners-guide.md)
+  * [💰 Your First Bug in 72 Hours: A Real Roadmap](getting-started/01-first-bug-72-hours.md)
 
 ## Overview
 
@@ -31,6 +32,7 @@
 * [ℹ️ Recon Tips](recon-tips/README.md)
   * [How AI Changed My Bug Bounty Workflow: 60% Faster Recon, 3x More Findings](recon-tips/how-ai-changed-my-bug-bounty-workflow-60-faster-recon-3x-more-findings.md)
   * [AI-Powered Reconnaissance: The Complete 2026 Guide](recon-tips/ai-powered-reconnaissance-the-complete-2026-guide.md)
+  * [🚀 The $8K Subdomain: Advanced Recon That Finds Bugs](reconnaissance/08k-subdomain-advanced-recon.md)
   * [😍 30 Commonly Targeted Ports by Hackers: A Comprehensive Guide](recon-tips/30-commonly-targeted-ports-by-hackers-a-comprehensive-guide.md)
   * [🎗️ Best Recon Technique For Active Subdomain Enumeration](recon-tips/best-recon-technique-for-active-subdomain-enumeration.md)
   * [1️⃣ Unlocking Bounty Riches: A Glimpse into the World of Awesome Bug Bounties](recon-tips/one-liner-from-awesome-bug-bounty.md)
@@ -43,6 +45,7 @@
     * [🔬 Tool - 4 Subfinder: An Essential Guide for Domain Reconnaissance](recon-tips/series-on-the-power-of-reconnaissance-tools/tool-4-subfinder-an-essential-guide-for-domain-reconnaissance.md)
   * [50 Copy-Paste Recon Commands That Find Bugs](recon-tips/50-copy-paste-recon-commands-that-find-bugs.md)
 * [🕸️ Web Application](web-application/README.md)
+  * [🤖 AI-Assisted Bug Hunting: Prompts, Tools & Real Results](web-testing/ai-assisted-bug-hunting.md)
   * [How-To Guide: Setting Up Your First Bug Bounty Lab](web-application/how-to-guide-setting-up-your-first-bug-bounty-lab.md)
   * [🏺 Top 100 web vulnerabilities](web-application/top-100-web-vulnerabilities.md)
   * [🥈 Introducing 20 web-application hacking tools🔥🤩🌵](web-application/introducing-20-web-application-hacking-tools.md)
@@ -111,6 +114,7 @@
   * [Cloud Pen-testing Part -6](cloud-pen-testing-checklist/cloud-pen-testing-part-6.md)
 
 ## ⚒️ Tools
+* [⚡ Three Tools That Find Bugs When Burp Finds Nothing](tool-deep-dives/three-tools-find-bugs.md)
 
 * [The $8,000 Subdomain That Changed Everything: A Bug Hunter's Journey with Amass](tools/the-usd8-000-subdomain-that-changed-everything-a-bug-hunters-journey-with-amass.md)
 * [Nuclei - The Vulnerability Scanner That Changed Bug Bounty](tools/nuclei-the-vulnerability-scanner-that-changed-bug-bounty.md)
