@@ -7,18 +7,7 @@ coverY: 0
 
 # Bug Bounty Platforms Compared: Where to Hunt in 2026
 
-{% tabs %}
-{% tab title="Tab 1" %}
-**Skill Level:** 🟢 Beginner\
-**Time:** 15 minutes\
-**Goal:** Choose the right platform for your skill level\
-**Last Updated:** 2026-02-27
-{% endtab %}
-{% endtabs %}
-
-***
-
-### 🤔 The Platform Problem
+🤔 The Platform Problem
 
 When I started bug hunting in 2022, I made a classic rookie mistake: I jumped straight into HackerOne and targeted Facebook.
 
@@ -583,5 +572,4 @@ Don't be like me, chasing every shiny object. Focus wins.
 
 **Now pick a platform and start hunting! The best time to start was yesterday. The second best time is now.** 🐛💰
 
-_Last Updated: 2026-02-27_\
-&#xNAN;_&#x51;uestions? Hit me up on Twitter @CipherOps\_tech_
+_Hit me up on Twitter @CipherOps\_tech_

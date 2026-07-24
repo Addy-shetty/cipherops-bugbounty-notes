@@ -1,15 +1,13 @@
 ---
 description: 'Ref: https://hackerone.com/reports/1864188'
-cover: ../../.gitbook/assets/Blue Pink Gradient Fashion Banner (2) (1).png
+cover: ../../.gitbook/assets/Blue Pink Gradient Fashion Banner (2).png
 coverY: -14
 layout: landing
 ---
 
 # 🤯 Understanding SSRF Vulnerabilities and Their Impact
 
-## &#x20;:heavy\_multiplication\_x: [<mark style="color:red;">Twitter</mark>](https://twitter.com/Cipher0ps_tech?t=MlqumIay8I49eWwhjgrotg\&s=09) :link: [<mark style="color:red;">Linkedin</mark>](https://www.linkedin.com/company/cipherops/) :tv: [<mark style="color:red;">Telegram</mark>](https://t.me/cipherops_tech) :tada: <mark style="color:red;">I</mark>[<mark style="color:red;">nstagram</mark>](https://instagram.com/cipherops_tech?igshid=MzNlNGNkZWQ4Mg==)
-
-
+## :heavy\_multiplication\_x: [<mark style="color:red;">Twitter</mark>](https://twitter.com/Cipher0ps_tech?t=MlqumIay8I49eWwhjgrotg\&s=09) :link: [<mark style="color:red;">Linkedin</mark>](https://www.linkedin.com/company/cipherops/) :tv: [<mark style="color:red;">Telegram</mark>](https://t.me/cipherops_tech) :tada: <mark style="color:red;">I</mark>[<mark style="color:red;">nstagram</mark>](https://instagram.com/cipherops_tech?igshid=MzNlNGNkZWQ4Mg==)
 
 Server-Side Request Forgery (SSRF) is a critical security vulnerability that allows attackers to send unauthorized requests from the server to other internal or external resources. In this article, we will analyze some examples of SSRF queries and curl commands to better comprehend the severity of this issue.
 
@@ -117,8 +115,6 @@ If you have a blind SSRF that can only read images (but for some reason can't re
 {% embed url="https://x.com/chybeta/status/1176165964196376576?s=20" %}
 
 <img src="https://2207729183-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LbWrDBBrbM1WtGeIKRO%2F-MTAEQ3wRjUmCfcVCv3d%2F-MTAErI78RbCVBhg8jGj%2Fimage.png?alt=media&#x26;token=f90e59f3-c38b-48ea-b8b3-e7f1484bff66" alt="" data-size="original">
-
-
 
 In this instance, the GraphQL query includes a modified URL with the placeholder `█████`, suggesting an attempt to perform an SSRF request to an internal host. If successful, this could expose sensitive information or services running on the internal network.
 

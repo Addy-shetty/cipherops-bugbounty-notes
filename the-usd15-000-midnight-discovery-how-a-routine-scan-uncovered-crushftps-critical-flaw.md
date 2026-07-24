@@ -1,4 +1,5 @@
 ---
+icon: cloud-check
 cover: >-
   https://images.unsplash.com/photo-1772442164006-ba1b8e7bfc32?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM2NDI2NTh8&ixlib=rb-4.1.0&q=85
 coverY: 0
@@ -446,12 +447,14 @@ That's why we do this.
 
 ***
 
-**Find this story helpful?**&#x20;
+**Find this story helpful?**
 
 Share it with your bug bounty squad!\
-**Questions about the technical details?**&#x20;
+**Questions about the technical details?**
 
-Join our [Telegram community](https://t.me/bugbounty_tech)\
+Join our [Telegram community](https://t.me/bugbounty_tech)
+
+\
 **Want to share your own story?** Submit it for our Community Spotlight!
 
 ***

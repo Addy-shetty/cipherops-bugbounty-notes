@@ -27,7 +27,7 @@ Command: ffuf -u “https://FUZZ.target.com" -w <path_to_wordlist> -mc 200,301,3
 Command: altdns -i hackerone.txt -o data_output -r -s final.txt -w words.txt
 ```
 
-<figure><img src="../.gitbook/assets/image (8).png" alt="Active Subdomain Enumeration Using FFUF"><figcaption><p>Active Subdomain Enumeration Using FFUF</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt="Active Subdomain Enumeration Using FFUF"><figcaption><p>Active Subdomain Enumeration Using FFUF</p></figcaption></figure>
 
 <mark style="color:green;">Technique 2:</mark> Favicon Hashes Favicons, the icons representing your website, possess unique hash values that can aid in discovering domains sharing the same hash function. Use the FavFreak tool to calculate favicon hashes. Execute the following command:
 
@@ -49,7 +49,7 @@ More About this Tool [here](https://medium.com/@Asm0d3us/weaponizing-favicon-ico
 command: cat subdomains.txt | dnsx -a -resp-only | nrich -
 ```
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="Using shodan Search Engine to detect site that have same favicon hashed"><figcaption><p>use a nrich tool to check out the subdomains </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt="Using shodan Search Engine to detect site that have same favicon hashed"><figcaption><p>use a nrich tool to check out the subdomains</p></figcaption></figure>
 
 <mark style="color:green;">Technique 4:</mark> Choosing the Right Target When dealing with applications that have numerous subdomains, selecting the right subdomain to start hunting can be challenging. Utilize the interesting subs gf pattern list to identify interesting subdomains worth investigating. Execute the following command:
 
@@ -63,8 +63,6 @@ cat subdoma.txt | gf interestingsubs
 
 <figure><img src="https://miro.medium.com/max/720/1*Dz43T4JUM49M4vdpgSlCYw.png" alt="Performing whoislookup on target domain"><figcaption><p>Performing whoislookup on target domain</p></figcaption></figure>
 
-
-
 <figure><img src="https://miro.medium.com/max/720/1*bVYAtg61mEC2Hg_oO1cevA.jpeg" alt="Searching For Tech Emails"><figcaption><p>Searching For Tech Emails</p></figcaption></figure>
 
 <mark style="color:green;">Technique 5</mark>: Reverse Whoislookup Performing a WHOIS lookup on a target domain and checking for Tech Emails can provide WHOIS registration results. This information can be utilized to gather all assets associated with an organization. Follow these steps: A. Perform a WHOIS lookup on the target domain and check for Tech Emails. B. Visit drs.whoisxmlapi.com, sign up/login (500 free credits initially), and search with the Tech Email to discover all assets belonging to the target organization.
@@ -76,8 +74,6 @@ Command: cat dorks.txt | uncover
 ```
 
 <figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>uncover tool link <a href="https://github.com/projectdiscovery/uncover">https://github.com/projectdiscovery/uncover</a></p></figcaption></figure>
-
-
 
 : Finding Hidden Paths Using Meg Discovering hidden paths or directories is a crucial reconnaissance technique. Meg is a powerful tool that facilitates quick and efficient directory brute-forcing without overwhelming network traffic. Execute the following command:
 

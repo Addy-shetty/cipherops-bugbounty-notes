@@ -28,7 +28,7 @@ By following this guide, you will:
 
 ### 📊 Visual Roadmap
 
-&#x20;_Visual guide: 6 steps from setup to first bounty_
+_Visual guide: 6 steps from setup to first bounty_
 
 <figure><img src="../.gitbook/assets/Untitled-2026-01-20-1207(1).png" alt=""><figcaption></figcaption></figure>
 
@@ -859,19 +859,6 @@ docker run -d -p 80:80 vulnerables/web-dvwa
 * Month 3: Earn first bounty
 * Month 6: $1000 total earnings
 * Year 1: $10,000 total earnings
-
-***
-
-### 📞 Getting Help
-
-**Stuck? Ask for help:**
-
-* HackerOne Support
-* Twitter #bugbountytips
-* Discord communities
-* This guide's GitHub issues
-
-**Remember:** Everyone was a beginner once!
 
 ***
 
