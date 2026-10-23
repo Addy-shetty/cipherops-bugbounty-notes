@@ -97,7 +97,7 @@ For those keeping score at home:\
 
 #### Visualizing the Attack
 
-<figure><img src=".gitbook/assets/Untitled-2026-01-20-1207.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled-2026-01-20-1207.png" alt=""><figcaption></figcaption></figure>
 
 Before going further, I sketched out the potential attack flow. Understanding the sequence helps identify not just the vulnerability, but the full impact chain.
 

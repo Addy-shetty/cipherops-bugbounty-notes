@@ -157,6 +157,6 @@ done > fuzz-results.txt
 
 * [How to start bug bounty: $500 first bug in 72 hours](../getting-started/01-first-bug-72-hours.md)
 * [Advanced reconnaissance: $8,000 subdomain techniques](../reconnaissance/08k-subdomain-advanced-recon.md)
-* [AI bug bounty workflow: LLM prompt library](../web-testing/ai-assisted-bug-hunting.md)
+* [AI bug bounty workflow: LLM prompt library](../ai-for-bug-bounty/ai-assisted-bug-hunting.md)
 
 _Part of_ [_CipherOps Bug Bounty Notes_](https://cipherops.gitbook.io/bug-bounty-notes/)_._

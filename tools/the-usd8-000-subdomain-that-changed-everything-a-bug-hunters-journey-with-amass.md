@@ -556,12 +556,12 @@ cat domains.txt subfinder.txt | sort -u | httpx | naabu
 
 #### If You're a Beginner:
 
-**Start here:** [Setting Up Your First Bug Bounty Lab](../web-application/how-to-guide-setting-up-your-first-bug-bounty-lab.md)\
-**Then learn:** [How to Find Your First Bug](../readme/bug-bounty-platforms-compared-where-to-hunt-in-2026.md)
+**Start here:** [Setting Up Your First Bug Bounty Lab](../getting-started/how-to-guide-setting-up-your-first-bug-bounty-lab.md)\
+**Then learn:** [How to Find Your First Bug](../getting-started/bug-bounty-platforms-compared-where-to-hunt-in-2026.md)
 
 #### If You're Intermediate:
 
-**Next tool:** [Nuclei for Vulnerability Scanning](/broken/pages/zy0jDrcyuLOrXqASoMEp)\
+**Next tool:** [Nuclei for Vulnerability Scanning](nuclei-the-vulnerability-scanner-that-changed-bug-bounty.md)\
 **Next technique:** [Advanced Recon Methodology](../recon-tips/best-recon-technique-for-active-subdomain-enumeration.md)
 
 #### If You're Advanced:
@@ -597,7 +597,7 @@ cat domains.txt subfinder.txt | sort -u | httpx | naabu
 * **httpx** - Fast HTTP prober _(coming soon)_
 * **naabu** - Port scanner _(coming soon)_
 * **aquatone** - Screenshot tool _(coming soon)_
-* [nuclei](/broken/pages/zy0jDrcyuLOrXqASoMEp) - Vulnerability scanner
+* [nuclei](nuclei-the-vulnerability-scanner-that-changed-bug-bounty.md) - Vulnerability scanner
 
 ***
 

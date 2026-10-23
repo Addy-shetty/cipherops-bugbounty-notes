@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/sucess(1).png
+cover: ../.gitbook/assets/sucess(1).png
 coverY: -54.79923027581783
 layout:
   width: default
@@ -22,6 +22,8 @@ layout:
   tags:
     visible: true
   actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
@@ -84,17 +86,17 @@ Help the reader envision how a malicious attacker could exploit the XSS vulnerab
 
 If you have a solid grasp of the issue's root cause, consider recommending potential mitigations. Your insight can save time and effort in researching solutions for the security team. However, provide such recommendations only when confident about the issue's source.
 
-Learn From Bugs Disclosure&#x20;
+Learn From Bugs Disclosure
 
-<mark style="color:yellow;">`XSS`</mark> [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-xss-bug-bounty-reports-b3c90e2288c8`</mark>](https://medium.com/@corneacristian/top-25-xss-bug-bounty-reports-b3c90e2288c8)&#x20;
+<mark style="color:yellow;">`XSS`</mark> [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-xss-bug-bounty-reports-b3c90e2288c8`</mark>](https://medium.com/@corneacristian/top-25-xss-bug-bounty-reports-b3c90e2288c8)
 
-<mark style="color:yellow;">`RCE`</mark>  [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-rce-bug-bounty-reports-bc9555cca7bc`</mark>](https://medium.com/@corneacristian/top-25-rce-bug-bounty-reports-bc9555cca7bc)&#x20;
+<mark style="color:yellow;">`RCE`</mark> [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-rce-bug-bounty-reports-bc9555cca7bc`</mark>](https://medium.com/@corneacristian/top-25-rce-bug-bounty-reports-bc9555cca7bc)
 
-<mark style="color:yellow;">`Race Condition`</mark> [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-race-condition-bug-bounty-reports-84f9073bf9e5`</mark>](https://medium.com/@corneacristian/top-25-race-condition-bug-bounty-reports-84f9073bf9e5)&#x20;
+<mark style="color:yellow;">`Race Condition`</mark> [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-race-condition-bug-bounty-reports-84f9073bf9e5`</mark>](https://medium.com/@corneacristian/top-25-race-condition-bug-bounty-reports-84f9073bf9e5)
 
-<mark style="color:yellow;">`IDOR`</mark> [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-idor-bug-bounty-reports-ba8cd59ad331`</mark>](https://medium.com/@corneacristian/top-25-idor-bug-bounty-reports-ba8cd59ad331)&#x20;
+<mark style="color:yellow;">`IDOR`</mark> [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-idor-bug-bounty-reports-ba8cd59ad331`</mark>](https://medium.com/@corneacristian/top-25-idor-bug-bounty-reports-ba8cd59ad331)
 
-<mark style="color:yellow;">`Open Redirect`</mark> [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-open-redirect-bug-bounty-reports-5ffe11788794`</mark>](https://medium.com/@corneacristian/top-25-open-redirect-bug-bounty-reports-5ffe11788794)&#x20;
+<mark style="color:yellow;">`Open Redirect`</mark> [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-open-redirect-bug-bounty-reports-5ffe11788794`</mark>](https://medium.com/@corneacristian/top-25-open-redirect-bug-bounty-reports-5ffe11788794)
 
 <mark style="color:yellow;">`Wordpress`</mark> [<mark style="color:green;">`https://medium.com/@corneacristian/top-25-wordpress-bug-bounty-reports-f208ea2dad3f`</mark>](https://medium.com/@corneacristian/top-25-wordpress-bug-bounty-reports-f208ea2dad3f)
 

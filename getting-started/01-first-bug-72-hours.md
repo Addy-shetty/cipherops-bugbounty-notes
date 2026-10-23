@@ -97,6 +97,6 @@ Stuff that works:
 
 * [Advanced recon techniques: how I found an $8,000 subdomain](../reconnaissance/08k-subdomain-advanced-recon.md)
 * [Best bug bounty tools: 3 tools that find 80% of vulnerabilities](../tool-deep-dives/three-tools-find-bugs.md)
-* [AI bug bounty hunting: use LLMs to find bugs 3x faster](../web-testing/ai-assisted-bug-hunting.md)
+* [AI bug bounty hunting: use LLMs to find bugs 3x faster](../ai-for-bug-bounty/ai-assisted-bug-hunting.md)
 
 _Part of_ [_CipherOps Bug Bounty Notes_](https://cipherops.gitbook.io/bug-bounty-notes/)_._
