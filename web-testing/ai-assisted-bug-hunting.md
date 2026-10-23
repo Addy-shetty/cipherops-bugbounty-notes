@@ -1,22 +1,22 @@
-# AI Bug Bounty Hunting: How I Use LLMs to Find Vulnerabilities 3x Faster
+# 🤖 AI-Assisted Bug Hunting: Prompts, Tools & Real Results
 
-![AI-Assisted Bug Hunting Workflow](../../images/web-testing/ai-assisted-workflow.excalidraw)
+![AI-Assisted Bug Hunting Workflow](../.gitbook/assets/ai-assisted-workflow.excalidraw)
 
-*View: drag onto [excalidraw.com](https://excalidraw.com)*
+_View: drag onto_ [_excalidraw.com_](https://excalidraw.com)
 
----
+***
 
 **The AI bug bounty workflow that cut my recon time by 60%. Complete prompt library, tool comparison, and copy-paste scripts.**
 
-*By CipherOps | Updated July 2026*
+_By CipherOps | Updated July 2026_
 
----
+***
 
 I used to think "real hackers don't use AI." Then I watched a colleague find an IDOR in 12 minutes that took me 2 hours manually.
 
 I tried his method the next day. Haven't gone back.
 
----
+***
 
 ## What AI is actually good at (and what it isn't)
 
@@ -26,7 +26,7 @@ I tried his method the next day. Haven't gone back.
 
 The sweet spot: AI does the grunt work. You do the thinking.
 
----
+***
 
 ## The AI bug bounty workflow
 
@@ -83,7 +83,7 @@ I found SSRF in target.com's profile image upload. Write a report:
 Under 500 words. No fluff.
 ```
 
----
+***
 
 ## LLM prompt library for bug bounty hunters
 
@@ -125,29 +125,29 @@ I found {VULN_TYPE} in {ENDPOINT}. Write a report:
 Under 500 words. Include CVSS score estimate.
 ```
 
----
+***
 
 ## AI tools for security testing — comparison
 
-| Tool | Best for | Cost | Rating |
-|------|----------|------|--------|
-| Claude | Code analysis, reasoning | Free tier | Best all-round |
-| ChatGPT | Payloads, quick lookups | Free tier | Good daily driver |
-| GitHub Copilot | Automation scripts | $10/mo | Worth it |
-| Local LLMs (Ollama) | Sensitive data, offline | Free | Slower |
+| Tool                | Best for                 | Cost      | Rating            |
+| ------------------- | ------------------------ | --------- | ----------------- |
+| Claude              | Code analysis, reasoning | Free tier | Best all-round    |
+| ChatGPT             | Payloads, quick lookups  | Free tier | Good daily driver |
+| GitHub Copilot      | Automation scripts       | $10/mo    | Worth it          |
+| Local LLMs (Ollama) | Sensitive data, offline  | Free      | Slower            |
 
 My stack: Claude + ChatGPT + Copilot. $20/month total.
 
----
+***
 
 None of this replaces knowing what you're doing. What it replaces is the 45 minutes of manually scanning a JS file at 1 AM when your eyes are blurring.
 
----
+***
 
 ## Related bug bounty + AI guides
-- [Best bug bounty tools: 3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md)
-- [Advanced recon techniques: $8,000 subdomain story](../reconnaissance/08k-subdomain-advanced-recon.md)
-- [How to start bug bounty: my first $500 in 72 hours](../getting-started/01-first-bug-72-hours.md)
 
-*Part of [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/).*
+* [Best bug bounty tools: 3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md)
+* [Advanced recon techniques: $8,000 subdomain story](../reconnaissance/08k-subdomain-advanced-recon.md)
+* [How to start bug bounty: my first $500 in 72 hours](../getting-started/01-first-bug-72-hours.md)
 
+_Part of_ [_CipherOps Bug Bounty Notes_](https://cipherops.gitbook.io/bug-bounty-notes/)_._

@@ -1,22 +1,22 @@
-# Advanced Subdomain Enumeration: The $8,000 Bug Bounty Recon Technique
+# 🚀 The $8K Subdomain: Advanced Recon That Finds Bugs
 
-![Advanced Recon Pipeline](../../images/reconnaissance/advanced-recon-pipeline.excalidraw)
+![Advanced Recon Pipeline](../.gitbook/assets/advanced-recon-pipeline.excalidraw)
 
-*View: drag onto [excalidraw.com](https://excalidraw.com) | PNG: [recon-mindmap.png](../images/reconnaissance/recon-mindmap.png)*
+_View: drag onto_ [_excalidraw.com_](https://excalidraw.com) _| PNG:_ [_recon-mindmap.png_](../images/reconnaissance/recon-mindmap.png)
 
----
+***
 
 **Most hunters run subfinder and stop. Here's how advanced recon finds what others miss — with copy-paste commands.**
 
-*By CipherOps | Updated July 2026*
+_By CipherOps | Updated July 2026_
 
----
+***
 
 I was stuck. Three months in, $850 total. Every report I filed was a duplicate.
 
 The problem wasn't my exploit skills. It was that I was scanning the same targets as everyone else with the same tools. The high-value bugs aren't on the main domain. They're on forgotten infrastructure.
 
----
+***
 
 ## What basic subdomain enumeration misses
 
@@ -29,13 +29,14 @@ subfinder -d target.com | httpx | nuclei
 This finds what certificate transparency logs already know about. The CVEs people have been scanning for since 2021.
 
 What it skips:
-- Dev servers decommissioned but never shut down
-- Cloud resources created for a sprint in 2019, abandoned, still running
-- Subdomains that don't appear in cert logs at all
+
+* Dev servers decommissioned but never shut down
+* Cloud resources created for a sprint in 2019, abandoned, still running
+* Subdomains that don't appear in cert logs at all
 
 These are where the $8,000 bugs live.
 
----
+***
 
 ## Advanced recon: the full stack
 
@@ -72,26 +73,26 @@ grep -v ":80\|:443\|:8080\|:8443" open_ports.txt > unusual_ports.txt
 
 Everyone scans 80 and 443. Almost nobody scans all 65,535. The services on weird ports tend to be unmonitored and unpatched.
 
----
+***
 
 ## The bug bounty payout
 
 That S3 bucket? $8,000. Tuesday 2:47 AM discovery, triaged by 9:30 AM, resolved Thursday.
 
----
+***
 
 ## Recon tool comparison
 
-| Tool | What it finds | Who uses it | Real value |
-|------|--------------|-------------|------------|
-| subfinder | Cert log subdomains | Everyone | Baseline |
-| gobuster dns | Brute-forced subdomains | Almost nobody | Finds what certs miss |
-| cloud_enum | Buckets, cloud resources | Almost nobody | Highest $ per finding |
-| naabu (full) | All 65,535 ports | Almost nobody | Unmonitored services |
+| Tool         | What it finds            | Who uses it   | Real value            |
+| ------------ | ------------------------ | ------------- | --------------------- |
+| subfinder    | Cert log subdomains      | Everyone      | Baseline              |
+| gobuster dns | Brute-forced subdomains  | Almost nobody | Finds what certs miss |
+| cloud\_enum  | Buckets, cloud resources | Almost nobody | Highest $ per finding |
+| naabu (full) | All 65,535 ports         | Almost nobody | Unmonitored services  |
 
 The pattern is not subtle. Tools in the "everyone" column find the $500 bugs. The "almost nobody" column finds the $8,000 ones.
 
----
+***
 
 ## Copy-paste recon script
 
@@ -118,12 +119,12 @@ naabu -l 3_live.txt -p 1-65535 -rate 1000 -o 4_ports.txt
 echo "[+] Done. Check 4_ports.txt for unusual ports and cloud_enum for exposed buckets"
 ```
 
----
+***
 
 ## Related bug bounty recon guides
-- [How to start bug bounty: $500 from my first bug in 72 hours](../getting-started/01-first-bug-72-hours.md)
-- [Best bug bounty tools: 3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md)
-- [AI bug bounty workflow: automate recon with LLMs](../web-testing/ai-assisted-bug-hunting.md)
 
-*Part of [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/).*
+* [How to start bug bounty: $500 from my first bug in 72 hours](../getting-started/01-first-bug-72-hours.md)
+* [Best bug bounty tools: 3 tools that find 80% of bugs](../tool-deep-dives/three-tools-find-bugs.md)
+* [AI bug bounty workflow: automate recon with LLMs](../web-testing/ai-assisted-bug-hunting.md)
 
+_Part of_ [_CipherOps Bug Bounty Notes_](https://cipherops.gitbook.io/bug-bounty-notes/)_._

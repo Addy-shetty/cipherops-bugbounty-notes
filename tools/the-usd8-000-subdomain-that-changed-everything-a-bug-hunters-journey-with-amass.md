@@ -556,18 +556,18 @@ cat domains.txt subfinder.txt | sort -u | httpx | naabu
 
 #### If You're a Beginner:
 
-**Start here:** \[Setting Up Your First Bug Bounty Lab]\(**coming soon**)\
-**Then learn:** [How to Find Your First Bug](https://cipherops.gitbook.io/bug-bounty-notes/~/revisions/rFD8Jb0Le1iFtaJZ7rD9/readme/bug-bounty-platforms-compared-where-to-hunt-in-2026)
+**Start here:** [Setting Up Your First Bug Bounty Lab](../web-application/how-to-guide-setting-up-your-first-bug-bounty-lab.md)\
+**Then learn:** [How to Find Your First Bug](../readme/bug-bounty-platforms-compared-where-to-hunt-in-2026.md)
 
 #### If You're Intermediate:
 
-**Next tool:** [Nuclei for Vulnerability Scanning](https://cipherops.gitbook.io/bug-bounty-notes/~/revisions/OFMFgVhvJXTppHDgTUPa/tools/nuclei-the-vulnerability-scanner-that-changed-bug-bounty)\
-**Next technique:** [Advanced Recon Methodology](https://cipherops.gitbook.io/bug-bounty-notes/~/revisions/rFD8Jb0Le1iFtaJZ7rD9/recon-tips/best-recon-technique-for-active-subdomain-enumeration)
+**Next tool:** [Nuclei for Vulnerability Scanning](/broken/pages/zy0jDrcyuLOrXqASoMEp)\
+**Next technique:** [Advanced Recon Methodology](../recon-tips/best-recon-technique-for-active-subdomain-enumeration.md)
 
 #### If You're Advanced:
 
-**Challenge:** \[Finding Vulnerabilities in Cloud Infrastructure]\(**coming soon**)\
-**Next level:** \[Chaining Vulnerabilities for Maximum Impact]\(**coming soon**)
+**Challenge:** Finding Vulnerabilities in Cloud Infrastructure _(coming soon)_\
+**Next level:** Chaining Vulnerabilities for Maximum Impact _(coming soon)_
 
 ***
 
@@ -584,7 +584,7 @@ cat domains.txt subfinder.txt | sort -u | httpx | naabu
 * [VirusTotal](https://www.virustotal.com) - Free account
 * [Shodan](https://www.shodan.io) - Free tier (100 credits/month)
 * [Censys](https://search.censys.io) - Free tier (250 queries/month)
-* [Chaos](https://chaos.projectdiscovery.io) - Free for researchers https://cipherops.gitbook.io/bug-bounty-notes/\~/revisions/OFMFgVhvJXTppHDgTUPa/tools/nuclei-the-vulnerability-scanner-that-changed-bug-bounty
+* [Chaos](https://chaos.projectdiscovery.io) - Free for researchers
 
 #### Wordlists
 
@@ -594,10 +594,10 @@ cat domains.txt subfinder.txt | sort -u | httpx | naabu
 
 #### Related Tools
 
-* \[httpx]\(**coming soon**) - Fast HTTP prober
-* \[naabu]\(**coming soon**) - Port scanner
-* \[aquatone]\(**coming soon**) - Screenshot tool
-* [nuclei](https://cipherops.gitbook.io/bug-bounty-notes/~/revisions/OFMFgVhvJXTppHDgTUPa/tools/nuclei-the-vulnerability-scanner-that-changed-bug-bounty) - Vulnerability scanner
+* **httpx** - Fast HTTP prober _(coming soon)_
+* **naabu** - Port scanner _(coming soon)_
+* **aquatone** - Screenshot tool _(coming soon)_
+* [nuclei](/broken/pages/zy0jDrcyuLOrXqASoMEp) - Vulnerability scanner
 
 ***
 

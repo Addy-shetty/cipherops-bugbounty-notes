@@ -1,22 +1,22 @@
-# Best Bug Bounty Tools 2026: 3 Tools That Find 80% of Vulnerabilities (With Scripts)
+# ⚡ Three Tools That Find Bugs When Burp Finds Nothing
 
-![Bug Bounty Tool Ecosystem](../../images/tool-deep-dives/three-tools-ecosystem.excalidraw)
+![Bug Bounty Tool Ecosystem](../.gitbook/assets/three-tools-ecosystem.excalidraw)
 
-*View: drag onto [excalidraw.com](https://excalidraw.com)*
+_View: drag onto_ [_excalidraw.com_](https://excalidraw.com)
 
----
+***
 
 **Master Nuclei, ffuf, and katana — the only bug bounty tools most hunters need. Beginner to pro pipeline with copy-paste scripts.**
 
-*By CipherOps | Updated July 2026*
+_By CipherOps | Updated July 2026_
 
----
+***
 
 Every tools article is the same: 47 tools, 12 categories, infinite stars. You bookmark it, install 8, use 2, forget the rest.
 
 You need 3. These find 80% of what most bug bounty hunters catch in a typical engagement.
 
----
+***
 
 ## Nuclei: automated vulnerability scanning
 
@@ -60,7 +60,7 @@ YEOF
 nuclei -l live.txt -t check.yaml
 ```
 
----
+***
 
 ## ffuf: web fuzzing tool
 
@@ -91,7 +91,7 @@ ffuf -u 'https://target.com/api/user?id=FUZZ' \
   -w sqli.txt -fc 400
 ```
 
----
+***
 
 ## katana: web crawling for bug bounty
 
@@ -116,7 +116,7 @@ echo https://target.com | katana -d 5 -jc -kf all -c 50 \
   -silent | grep "?" | uro | sort -u > all_params.txt
 ```
 
----
+***
 
 ## Full bug bounty pipeline script
 
@@ -140,23 +140,23 @@ cat endpoints.txt | while read url; do
 done > fuzz-results.txt
 ```
 
----
+***
 
 ## Bug bounty tools comparison
 
-| Tool | Finds | Learn time | Priority |
-|------|-------|-----------|----------|
-| Nuclei | Known vulns, CVEs, misconfigs | 1 hour | First |
-| ffuf | Hidden endpoints, parameters | 2 hours | Second |
-| katana | JS-hidden routes, forms | 30 min | Second |
-| Others | Optimization | Varies | Later |
+| Tool   | Finds                         | Learn time | Priority |
+| ------ | ----------------------------- | ---------- | -------- |
+| Nuclei | Known vulns, CVEs, misconfigs | 1 hour     | First    |
+| ffuf   | Hidden endpoints, parameters  | 2 hours    | Second   |
+| katana | JS-hidden routes, forms       | 30 min     | Second   |
+| Others | Optimization                  | Varies     | Later    |
 
----
+***
 
 ## Related bug bounty guides
-- [How to start bug bounty: $500 first bug in 72 hours](../getting-started/01-first-bug-72-hours.md)
-- [Advanced reconnaissance: $8,000 subdomain techniques](../reconnaissance/08k-subdomain-advanced-recon.md)
-- [AI bug bounty workflow: LLM prompt library](../web-testing/ai-assisted-bug-hunting.md)
 
-*Part of [CipherOps Bug Bounty Notes](https://cipherops.gitbook.io/bug-bounty-notes/).*
+* [How to start bug bounty: $500 first bug in 72 hours](../getting-started/01-first-bug-72-hours.md)
+* [Advanced reconnaissance: $8,000 subdomain techniques](../reconnaissance/08k-subdomain-advanced-recon.md)
+* [AI bug bounty workflow: LLM prompt library](../web-testing/ai-assisted-bug-hunting.md)
 
+_Part of_ [_CipherOps Bug Bounty Notes_](https://cipherops.gitbook.io/bug-bounty-notes/)_._

@@ -114,8 +114,8 @@
   * [Cloud Pen-testing Part -6](cloud-pen-testing-checklist/cloud-pen-testing-part-6.md)
 
 ## ⚒️ Tools
-* [⚡ Three Tools That Find Bugs When Burp Finds Nothing](tool-deep-dives/three-tools-find-bugs.md)
 
+* [⚡ Three Tools That Find Bugs When Burp Finds Nothing](tool-deep-dives/three-tools-find-bugs.md)
 * [The $8,000 Subdomain That Changed Everything: A Bug Hunter's Journey with Amass](tools/the-usd8-000-subdomain-that-changed-everything-a-bug-hunters-journey-with-amass.md)
 * [Nuclei - The Vulnerability Scanner That Changed Bug Bounty](tools/nuclei-the-vulnerability-scanner-that-changed-bug-bounty.md)
 * [Supercharge Your Bug Bounty Hunting with Claude Security Skills: The Complete Guide](tools/supercharge-your-bug-bounty-hunting-with-claude-security-skills-the-complete-guide.md)
@@ -144,7 +144,3 @@
 
 * [❓ Interview Question](interview-question/README.md)
   * [Question and Answers](interview-question/question-and-answers.md)
-* [Import](import/README.md)
-  * [1729001364016279874](import/1729001364016279874.md)
-* [Import](import-1/README.md)
-  * [1729001364016279874](import-1/1729001364016279874.md)
