@@ -1,102 +1,36 @@
 # Web Hack Tools
 
-```markdown
-❇️ Web Hack Tool Links
+A collection of web pentesting and scanning tool links.
 
-❇️ WordPress admin finder 
-🔗 Link : https://github.com/kancotdiq/wpaf
-
-❇️ Smb scanner tool 
-🔗 Link : https://github.com/TechnicalMujeeb/smb-scanner
-
-❇️ Heart Bleed scanner 
-🔗 Link : https://github.com/TechnicalMujeeb/HeartBleed
-
-❇️ weevely php web shell
- 🔗 Link : https://github.com/sunge/Weevely
-
-❇️ Webponized web shell
-🔗 Link : https://github.com/epinna/weevely3
-
-❇️ Nikto web scanner tool
- 🔗 Link : https://github.com/sullo/nikto
-
-❇️ Auto Ip or domain Attacking Tool 
-🔗 Link : https://github.com/Bhai4You/Ip-Attack
-
-❇️ Click jacking vulnerability scanner 
-🔗 Link : https://github.com/D4Vinci/Clickjacking-Tester
-
-❇️ All in 1 information gathering and web penetration tool DTect
-🔗 Link : https://github.com/Audi0x01/D-TECT-1
-
-❇️ Detect phishing URL 
-🔗 Link : https://github.com/UndeadSec/checkURL
-
-❇️ Dos attack tool - Golden eye
-🔗 Link : https://github.com/jseidl/GoldenEye
-
-❇️ Dos attack with hulk
-🔗 Link : https://github.com/grafov/hulk
-
-❇️ Sql vulnerability scanner 
-🔗 Link : https://github.com/Pure-L0G1C/SQL-scanner
-
-❇️ hack website with sqlmap
-🔗 Link : https://github.com/sqlmapproject/sqlmap
-
-❇️ information and vulnerability scanner with striker 
-🔗 Link : https://github.com/s0md3v/Striker
-
-❇️ web server attacking tool with dost 
-🔗 Link : https://github.com/verluchie/dost-attack
-
-❇️ advanced multithreaded admin panel finder 
-🔗 Link : https://github.com/s0md3v/Breacher
-
-❇️ Ssl vulnerability scanner 
-🔗 Link : https://github.com/PortSwigger/ssl-scanner
-
-❇️ sublister - Subdomain enumeration
-🔗 Link : https://github.com/aboul3la/Sublist3r
-
-❇️ WordPress vulnerability scanner and attacker
-🔗 Link : https://github.com/wpscanteam/wpscan
-
-❇️ Hunner scanner framework
-🔗 Link : https://github.com/b3-v3r/Hunner
-
-❇️ Red hawk all in 1 information gathering and scanning tool
-🔗 Link : https://github.com/Tuhinshubhra/RED_HAWK
-
-❇️ Dos attack tool with Xerxes
-🔗 Link : https://github.com/sepehrdaddev/
-Xerxes
-
-❇️ social fish phishing tool 
-🔗 Link : https://github.com/UndeadSec/SocialFish
-
-❇️ weeman phishing tool no root 
-🔗 Link : https://github.com/evait-security/weeman
-
-❇️ WordPress security scanner Wpseku 
-🔗 Link : https://github.com/m4ll0k/WPSeku
-
-❇️ IDN homograph attack tool
-🔗 Link : https://github.com/UndeadSec/EvilURL
-
-❇️ Detect security flaws with CMS 
-🔗 Link : https://github.com/Dionach/CMSmap
-
-❇️ Fire crack , admin, finders,  deface, bing dorking etc 
-🔗 Link : https://github.com/Ranginang67/Firecrack
-
-❇️ Pish web tool
- 🔗 Link : https://github.com/Cabdulahi/pish
-
-❇️ MITM attack tool 
-🔗 Link : https://github.com/websploit/websploit
-
-❇️ kill shot pentesting framework
-🔗 Link :https://github.com/bahaabdelwahed/killshot
-```
+* **WordPress admin finder** — [https://github.com/kancotdiq/wpaf](https://github.com/kancotdiq/wpaf)
+* **SMB scanner** — [https://github.com/TechnicalMujeeb/smb-scanner](https://github.com/TechnicalMujeeb/smb-scanner)
+* **Heartbleed scanner** — [https://github.com/TechnicalMujeeb/HeartBleed](https://github.com/TechnicalMujeeb/HeartBleed)
+* **weevely — PHP web shell** — [https://github.com/sunge/Weevely](https://github.com/sunge/Weevely)
+* **weevely3 web shell** — [https://github.com/epinna/weevely3](https://github.com/epinna/weevely3)
+* **Nikto web scanner** — [https://github.com/sullo/nikto](https://github.com/sullo/nikto)
+* **Auto IP / domain attacking tool** — [https://github.com/Bhai4You/Ip-Attack](https://github.com/Bhai4You/Ip-Attack)
+* **Clickjacking vulnerability scanner** — [https://github.com/D4Vinci/Clickjacking-Tester](https://github.com/D4Vinci/Clickjacking-Tester)
+* **D-TECT — all-in-one info gathering and web pentest tool** — [https://github.com/Audi0x01/D-TECT-1](https://github.com/Audi0x01/D-TECT-1)
+* **Phishing URL detector** — [https://github.com/UndeadSec/checkURL](https://github.com/UndeadSec/checkURL)
+* **GoldenEye — DoS attack tool** — [https://github.com/jseidl/GoldenEye](https://github.com/jseidl/GoldenEye)
+* **HULK — DoS attack tool** — [https://github.com/grafov/hulk](https://github.com/grafov/hulk)
+* **SQL vulnerability scanner** — [https://github.com/Pure-L0G1C/SQL-scanner](https://github.com/Pure-L0G1C/SQL-scanner)
+* **sqlmap** — [https://github.com/sqlmapproject/sqlmap](https://github.com/sqlmapproject/sqlmap)
+* **Striker — recon and vulnerability scanner** — [https://github.com/s0md3v/Striker](https://github.com/s0md3v/Striker)
+* **dost — web server attacking tool** — [https://github.com/verluchie/dost-attack](https://github.com/verluchie/dost-attack)
+* **Breacher — advanced admin panel finder** — [https://github.com/s0md3v/Breacher](https://github.com/s0md3v/Breacher)
+* **SSL vulnerability scanner** — [https://github.com/PortSwigger/ssl-scanner](https://github.com/PortSwigger/ssl-scanner)
+* **Sublist3r — subdomain enumeration** — [https://github.com/aboul3la/Sublist3r](https://github.com/aboul3la/Sublist3r)
+* **wpscan — WordPress vulnerability scanner** — [https://github.com/wpscanteam/wpscan](https://github.com/wpscanteam/wpscan)
+* **Hunner scanner framework** — [https://github.com/b3-v3r/Hunner](https://github.com/b3-v3r/Hunner)
+* **RED HAWK — all-in-one info gathering and scanning** — [https://github.com/Tuhinshubhra/RED\_HAWK](https://github.com/Tuhinshubhra/RED_HAWK)
+* **Xerxes — DoS attack tool** — [https://github.com/sepehrdaddev/Xerxes](https://github.com/sepehrdaddev/Xerxes)
+* **SocialFish — phishing tool** — [https://github.com/UndeadSec/SocialFish](https://github.com/UndeadSec/SocialFish)
+* **weeman — phishing tool (no root)** — [https://github.com/evait-security/weeman](https://github.com/evait-security/weeman)
+* **WPSeku — WordPress security scanner** — [https://github.com/m4ll0k/WPSeku](https://github.com/m4ll0k/WPSeku)
+* **EvilURL — IDN homograph attack tool** — [https://github.com/UndeadSec/EvilURL](https://github.com/UndeadSec/EvilURL)
+* **CMSmap — CMS security flaw detector** — [https://github.com/Dionach/CMSmap](https://github.com/Dionach/CMSmap)
+* **Firecrack — admin finder, deface, Bing dorking** — [https://github.com/Ranginang67/Firecrack](https://github.com/Ranginang67/Firecrack)
+* **pish — phishing web tool** — [https://github.com/Cabdulahi/pish](https://github.com/Cabdulahi/pish)
+* **websploit — MITM attack tool** — [https://github.com/websploit/websploit](https://github.com/websploit/websploit)
+* **killshot — pentesting framework** — [https://github.com/bahaabdelwahed/killshot](https://github.com/bahaabdelwahed/killshot)

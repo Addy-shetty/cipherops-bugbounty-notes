@@ -65,7 +65,7 @@
     * [🧞 API Security Cheat Sheet PART - 10](web-application/understanding-json-api-a-comprehensive-guide/api-security-cheat-sheet-part-10.md)
   * [👿 De-serialization Attack](web-application/de-serialization-attack.md)
   * [🅰️ Understanding Common API Vulnerabilities: A Deep Dive](web-application/understanding-common-api-vulnerabilities-a-deep-dive.md)
-  * [File Inclusion,CSRF Injection,Directory Traversal](web-application/file-inclusion-csrf-injection-directory-traversal.md)
+  * [File Inclusion, CSRF Injection, Directory Traversal](web-application/file-inclusion-csrf-injection-directory-traversal.md)
   * [GraphQL Injection,Insecure Deserialization,Header Injection](web-application/graphql-injection-insecure-deserialization-header-injection.md)
   * [Insecure Direct Object References, Open Redirect, Request Smuggling](web-application/insecure-direct-object-references-open-redirect-request-smuggling.md)
 * [Network & Cloud Security](network-security/README.md)
