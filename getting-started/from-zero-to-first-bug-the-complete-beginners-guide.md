@@ -7,36 +7,21 @@ coverY: 0
 
 # From Zero to First Bug: The Complete Beginner's Guide
 
-**Skill Level:** 🟢 Beginner\
-**Time to Complete:** 24 hours\
-**Goal:** Find and report your first valid bug\
-**Last Updated:** 2026-02-26
+**Skill level:** Beginner\
+**Time to complete:** \~24 hours\
+**Goal:** Find and report your first valid bug
 
 ***
 
-### 🎯 What You'll Achieve
+### What you'll achieve
 
-By following this guide, you will:
-
-* ✅ Set up a professional bug hunting environment
-* ✅ Find your first security vulnerability
-* ✅ Write a professional bug report
-* ✅ Submit to a real bug bounty program
-* ✅ Potentially earn your first bounty ($100-$500 typical)
+By following this guide, you will set up a bug hunting environment, find your first security vulnerability, write a professional bug report, and submit it to a real bug bounty program. A first valid finding on a paid program typically earns $100–$500, though many beginners start on no-bounty VDPs for the experience.
 
 ***
 
-### 📊 Visual Roadmap
+### Timeline breakdown
 
-_Visual guide: 6 steps from setup to first bounty_
-
-<figure><img src="../.gitbook/assets/Untitled-2026-01-20-1207(1).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-### ⏰ Timeline Breakdown
-
-| Phase                         | Time    | What You'll Do                       |
+| Phase                         | Time    | What you'll do                       |
 | ----------------------------- | ------- | ------------------------------------ |
 | **Hour 0-2:** Setup           | 2 hours | Install tools, configure environment |
 | **Hour 2-4:** Learn           | 2 hours | Understand basics, pick a target     |
@@ -47,14 +32,14 @@ _Visual guide: 6 steps from setup to first bounty_
 
 ***
 
-### Hour 0-2: Environment Setup
+### Hour 0-2: Environment setup
 
-#### Step 1: Install Kali Linux (or Alternative)
+#### Step 1: Install Kali Linux (or an alternative)
 
-**Option A: Virtual Machine (Recommended for Beginners)**
+**Option A — Virtual machine (recommended for beginners)**
 
 ```bash
-# Download Kali VM from Offensive Security
+# Download the Kali VM from Offensive Security
 # Import into VirtualBox or VMware
 # Allocate: 4GB RAM, 2 CPUs, 60GB disk
 
@@ -63,32 +48,27 @@ sudo docker pull kalilinux/kali-rolling
 sudo docker run -it kalilinux/kali-rolling
 ```
 
-**Option B: WSL2 on Windows**
+**Option B — WSL2 on Windows**
 
 ```powershell
 # In PowerShell (Administrator)
 wsl --install -d kali-linux
-# Restart computer, then:
+# Restart, then:
 wsl -d kali-linux
 ```
 
-**Option C: Native Installation (Advanced)**
+**Option C — Native installation (advanced)**
 
-* Download ISO from kali.org
-* Create bootable USB
-* Install alongside your OS
+Download the ISO from kali.org, create a bootable USB, and install alongside your OS.
 
-#### Step 2: Install Essential Tools
+#### Step 2: Install essential tools
 
-Run this automated installation script:
+Save this as `install_tools.sh` and run it:
 
 ```bash
 #!/bin/bash
-# save as: install_tools.sh
+echo "[*] Installing bug bounty tools..."
 
-echo "[*] Installing Bug Bounty Tools..."
-
-# Update system
 sudo apt update && sudo apt upgrade -y
 
 # Install Go
@@ -98,249 +78,124 @@ echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 echo 'export PATH=$PATH:~/go/bin' >> ~/.bashrc
 source ~/.bashrc
 
-# Install recon tools
+# Recon tools
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 go install -v github.com/ffuf/ffuf@latest
 
-# Install wordlists
-sudo apt install -y seclists
-sudo apt install -y wordlists
+# Wordlists and utilities
+sudo apt install -y seclists wordlists nmap dirb gobuster whatweb git curl python3-pip
+pip3 install requests beautifulsoup4
 
-# Install other tools
-sudo apt install -y nmap
-sudo apt install -y dirb
-sudo apt install -y gobuster
-sudo apt install -y whatweb
-sudo apt install -y git
-sudo apt install -y curl
-sudo apt install -y python3-pip
-
-# Install Python tools
-pip3 install requests
-pip3 install beautifulsoup4
-
-echo "[+] Installation complete!"
-echo "[+] Restart your terminal"
+echo "[+] Installation complete. Restart your terminal."
 ```
 
-**Run it:**
+Then:
 
 ```bash
 chmod +x install_tools.sh
 ./install_tools.sh
 ```
 
-#### Step 3: Configure Your Environment
+#### Step 3: Configure your environment
 
 ```bash
-# Create workspace
 mkdir -p ~/bugbounty/{tools,targets,reports,wordlists}
 cd ~/bugbounty
 
-# Set up Git (if you want to save your work)
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
 
-# Create useful aliases
 echo 'alias bb="cd ~/bugbounty"' >> ~/.bashrc
 echo 'alias targets="cd ~/bugbounty/targets"' >> ~/.bashrc
 echo 'alias tools="cd ~/bugbounty/tools"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-#### Step 4: Test Your Setup
+#### Step 4: Test your setup
 
 ```bash
-# Verify installations
 subfinder -version
 httpx -version
 nuclei -version
 ffuf -V
 nmap --version
-
-# Test basic connectivity
 ping -c 3 google.com
 ```
 
-**If all commands work, you're ready!** ✅
+If all commands work, you're ready.
 
 ***
 
-### Hour 2-4: Understanding the Basics
+### Hour 2-4: Understanding the basics
 
-#### What is Bug Bounty Hunting?
+Bug bounty hunting means finding security vulnerabilities in websites and apps, reporting them responsibly to the company, and getting paid for valid findings.
 
-Bug bounty hunting is:
+#### Types of bugs, easiest to hardest
 
-* Finding security vulnerabilities in websites/apps
-* Reporting them responsibly to companies
-* Getting paid for valid findings
+**Easier (start here):** information disclosure (exposed sensitive data), clickjacking, missing security headers, weak SSL/TLS configuration.
 
-#### Types of Bugs (Easy to Hard)
+**Medium:** [Cross-Site Scripting (XSS)](../web-application/the-art-of-xss-exploitation.md), open redirects, [CSRF](../web-application/file-inclusion-csrf-injection-directory-traversal.md), and [IDOR](../web-application/insecure-direct-object-references-open-redirect-request-smuggling.md).
 
-**🟢 Easy (Start Here):**
+**Harder:** SQL injection, remote code execution, authentication bypass, and business-logic flaws.
 
-1. **Information Disclosure** - Exposed sensitive data
-2. **Clickjacking** - UI redressing attacks
-3. **Missing Headers** - Security headers
-4. **Weak SSL/TLS** - Certificate issues
+#### Pick your first target
 
-**🟡 Medium:**
+Good programs for beginners share a few traits: wide scope, responsive triagers, and tolerance for newcomers. On [HackerOne](bug-bounty-platforms-compared-where-to-hunt-in-2026.md), filter the directory for beginner-friendly programs and avoid ones with strict scope or slow response times. On Bugcrowd, work through Bugcrowd University first, then look at Priority 1–3 programs.
 
-1. [**Cross-Site Scripting**](https://cipherops.gitbook.io/bug-bounty-notes/web-application/the-art-of-\[xss]\(https://cipherops.gitbook.io/bug-bounty-notes/web-application/the-art-of-xss-exploitation\)-exploitation) **(XSS)** - JavaScript injection
-2. **Open Redirects** - Unauthorized redirects
-3. [**CSRF**](https://cipherops.gitbook.io/bug-bounty-notes/web-application/file-inclusion-csrf-injection-directory-traversal) - [Cross-site request forgery](https://cipherops.gitbook.io/bug-bounty-notes/web-application/file-inclusion-csrf-injection-directory-traversal)
-4. [**IDOR**](https://cipherops.gitbook.io/bug-bounty-notes/web-application/insecure-direct-object-references-open-redirect-request-smuggling) - Insecure direct object references
-
-**🔴 Hard:**
-
-1. [**SQL Injection**](https://cipherops.gitbook.io/bug-bounty-notes/web-application/comprehensive-guide-to-web-content-discovery-tools-techniques-and-tips) - Database attacks
-2. **Remote Code Execution** - Server takeover
-3. **Authentication Bypass** - Login bypasses
-4. **Business Logic** - Workflow flaws
-
-#### Pick Your First Target
-
-**Best Programs for Beginners:**
-
-1. [**HackerOne**](https://cipherops.gitbook.io/bug-bounty-notes/readme/bug-bounty-platforms-compared-where-to-hunt-in-2026) **Directory**
-   * Filter: "Beginner friendly"
-   * Look for: Wide scope, responsive triagers
-   * Avoid: Strict scope, slow response times
-2. [**Bugcrowd**](https://cipherops.gitbook.io/bug-bounty-notes/readme/bug-bounty-platforms-compared-where-to-hunt-in-2026)
-   * Join "Bugcrowd University" first
-   * Look for "Priority 1-3" programs
-   * Good: Yahoo, eBay, Netgear
-3. **Public Programs with Wide Scope**
-   * U.S. Dept of Defense (hackerone.com/deptofdefense)
-   * Shopify
-   * Uber (select programs)
-
-**🎯 Recommended First Target:**
-
-* **U.S. Dept of Defense VDP**
-  * URL: https://hackerone.com/deptofdefense
-  * Wide scope (.mil domains)
-  * No payout (VDP) but great for learning
-  * Fast triage
-  * Good for resume
+**Recommended first target:** the U.S. Dept of Defense VDP (hackerone.com/deptofdefense). It has very wide scope (.mil domains) and fast triage. There's no payout, but it's an excellent place to learn and build a track record.
 
 ***
 
-### Hour 4-8: Reconnaissance (Finding Targets)
+### Hour 4-8: Reconnaissance
 
-#### Step-by-Step Recon
+Replace `example.com` with your actual target throughout.
 
-**Target Example:** `example.com` (replace with your actual target)
-
-**1. Find Subdomains (Passive - Safe)**
+**1. Find subdomains (passive, safe)**
 
 ```bash
-# Create directory for target
 mkdir -p ~/bugbounty/targets/example.com
 cd ~/bugbounty/targets/example.com
 
-# Run subfinder (passive only)
 subfinder -d example.com -all -silent -o subs.txt
-
-# Count what we found
-wc -l subs.txt
-echo "Found $(wc -l < subs.txt) subdomains!"
+echo "Found $(wc -l < subs.txt) subdomains"
 ```
 
-**Expected Output:**
-
-```
-50
-Found 50 subdomains!
-```
-
-**2. Find Live Hosts**
+**2. Find live hosts**
 
 ```bash
-# Check which subdomains are live
 httpx -l subs.txt -silent -o live_hosts.txt
-
-# See what we found
 cat live_hosts.txt
 ```
 
-**Expected Output:**
-
-```
-https://www.example.com
-https://api.example.com
-https://blog.example.com
-https://dev.example.com
-```
-
-**3. Technology Detection**
+**3. Detect technologies**
 
 ```bash
-# Detect technologies running on each host
 httpx -l live_hosts.txt -tech-detect -silent -o tech.txt
-
-# View results
 cat tech.txt
 ```
 
-**Expected Output:**
-
-```
-https://www.example.com [Apache, PHP, jQuery]
-https://api.example.com [nginx, Node.js]
-https://blog.example.com [WordPress, Apache]
-```
-
-#### Save Your Work
+Then organize your findings so the testing phase is tidy:
 
 ```bash
-# Organize findings
 mkdir -p {subdomains,hosts,ports,content}
 cp subs.txt subdomains/
 cp live_hosts.txt hosts/
-
-# Create summary
-cat << EOF > summary.txt
-Target: example.com
-Date: $(date)
-Subdomains Found: $(wc -l < subs.txt)
-Live Hosts: $(wc -l < live_hosts.txt)
-Technologies: $(cat tech.txt | wc -l) hosts scanned
-
-Next Steps:
-1. Test each live host for vulnerabilities
-2. Start with informational issues
-3. Look for XSS in input fields
-4. Check for IDOR in URLs
-EOF
-
-cat summary.txt
 ```
 
 ***
 
-### Hour 8-16: Finding Your First Bug
+### Hour 8-16: Finding your first bug
 
-#### Strategy: Start with Low-Hanging Fruit
+Start with low-hanging fruit.
 
-**Bug #1: Information Disclosure (Easiest)**
+**Bug type 1 — Information disclosure (easiest)**
 
-**What to Look For:**
-
-* Exposed `.git` directories
-* Backup files (`.bak`, `.old`, `.zip`)
-* Config files (`.env`, `config.php`)
-* API documentation
-* Debug information
-
-**Test These URLs on Each Host:**
+Look for exposed `.git` directories, backup files (`.bak`, `.old`, `.zip`), config files (`.env`, `config.php`), API docs, and debug output. Test a list of common paths against every live host:
 
 ```bash
-# Create test list
 cat << 'EOF' > test_urls.txt
 /.git/config
 /.env
@@ -348,520 +203,124 @@ cat << 'EOF' > test_urls.txt
 /config.json
 /.htaccess
 /robots.txt
-/sitemap.xml
 /api/
 /swagger.json
-/openapi.json
 /backup.zip
 /.DS_Store
-/wordpress/wp-config.php
 /admin/
 /phpinfo.php
 EOF
 
-# Test each live host
 for host in $(cat live_hosts.txt); do
-    echo "[*] Testing: $host"
     for endpoint in $(cat test_urls.txt); do
         status=$(curl -s -o /dev/null -w "%{http_code}" "$host$endpoint")
         if [ "$status" = "200" ]; then
-            echo "[+] FOUND: $host$endpoint (Status: $status)"
+            echo "[+] FOUND: $host$endpoint"
             echo "$host$endpoint" >> findings.txt
         fi
     done
 done
 ```
 
-**Finding Example:**
+An exposed `.env` often contains database credentials, API keys, and secret tokens — a high-impact finding.
 
-```
-[+] FOUND: https://dev.example.com/.env (Status: 200)
-```
+**Bug type 2 — Cross-Site Scripting (XSS)**
 
-**Impact:** Exposed environment variables often contain:
-
-* Database credentials
-* API keys
-* Secret tokens
-* Internal URLs
-
-**Bug #2: Cross-Site Scripting (XSS)**
-
-**What is XSS?** Injecting JavaScript into web pages that executes in victim's browser.
-
-**Simple Test (Reflected XSS):**
-
-1. Find any input field (search box, contact form, etc.)
-2. Enter: `<script>alert('XSS')</script>`
-3. Submit and check if alert pops up
-
-**Automated Testing with Nuclei:**
+XSS is injecting JavaScript that executes in a victim's browser. The quickest manual test: find an input field (search box, contact form), submit a harmless probe, and check whether it executes rather than being escaped. You can also scan with Nuclei:
 
 ```bash
-# Run XSS templates on all hosts
 nuclei -l live_hosts.txt -t ~/nuclei-templates/xss/ -silent -o xss_findings.txt
-
-# Check results
-cat xss_findings.txt
 ```
 
-**Manual Testing Script:**
+For the full payload reference, see [The Art of XSS Exploitation](../web-application/the-art-of-xss-exploitation.md).
+
+**Bug type 3 — IDOR (Insecure Direct Object Reference)**
+
+IDOR is accessing other users' data by changing an identifier in a URL — for example, incrementing `?id=123` to `?id=124` and seeing someone else's record. Pull candidate URLs with numeric parameters and compare responses:
 
 ```bash
-# Test for basic XSS
-test_xss() {
-    url=$1
-    payload="<script>alert('XSS')</script>"
-    
-    # Test in URL parameter
-    response=$(curl -s "$url/?search=$payload")
-    
-    if echo "$response" | grep -q "$payload"; then
-        echo "[+] Potential XSS: $url"
-        echo "$url" >> xss_potential.txt
-    fi
-}
-
-# Test each host
-for host in $(cat live_hosts.txt); do
-    test_xss "$host"
-done
-```
-
-**Bug #3: IDOR (Insecure Direct Object Reference)**
-
-**What is IDOR?** Accessing other users' data by changing IDs in URLs.
-
-**Example:**
-
-```
-# Your account page
-https://example.com/user.php?id=123
-
-# Try changing ID
-https://example.com/user.php?id=124
-https://example.com/user.php?id=125
-
-# If you see other users' data = IDOR bug!
-```
-
-**Automated Test:**
-
-```bash
-# Find URLs with numeric parameters
 cat live_hosts.txt | waybackurls | grep -E "\?.*id=[0-9]+" | head -20 > potential_idor.txt
-
-# Test each
-for url in $(cat potential_idor.txt); do
-    # Get original
-    original=$(curl -s "$url")
-    
-    # Change ID
-    new_url=$(echo "$url" | sed 's/id=[0-9]*/id=9999/')
-    test=$(curl -s "$new_url")
-    
-    # Compare
-    if [ "$original" != "$test" ] && [ -n "$test" ]; then
-        echo "[+] Potential IDOR: $url"
-        echo "$url" >> idor_findings.txt
-    fi
-done
 ```
 
 ***
 
-### Hour 16-20: Writing Your First Report
+### Hour 16-20: Writing your first report
 
-#### Report Structure
-
-**Template:**
+A good report has a short summary, precise technical details, clear reproduction steps, a proof of concept, an honest impact assessment, and remediation advice. Use this structure:
 
 ```markdown
 # Security Report: [Vulnerability Type] on [Target]
 
-## Executive Summary
+## Summary
 Brief description of the issue and impact (2-3 sentences)
 
 ## Technical Details
+- Type: [e.g., Information Disclosure]
+- Severity: [Low/Medium/High/Critical]
+- Affected URL / parameter / method
 
-### Vulnerability
-- **Type:** [e.g., Information Disclosure]
-- **Severity:** [Low/Medium/High/Critical]
-- **CVSS Score:** [if known]
-
-### Affected Endpoint
-- URL: [full URL]
-- Parameter: [if applicable]
-- HTTP Method: [GET/POST/etc]
-
-### Steps to Reproduce
+## Steps to Reproduce
 1. Navigate to [URL]
-2. [Action 1]
-3. [Action 2]
-4. Observe [result]
+2. [Action]
+3. Observe [result]
 
-### Proof of Concept
-[screenshot or video]
+## Proof of Concept
+[screenshot or short video]
 
-### Impact
-- What data is exposed?
-- Who is affected?
-- What's the business risk?
+## Impact
+What data is exposed, who is affected, and the business risk.
 
-### Remediation
-How to fix this issue:
-1. [Step 1]
-2. [Step 2]
+## Remediation
+How to fix it.
 
-### References
-- [OWASP Link]
-- [CWE Link]
-- [Related articles]
-
-## Additional Notes
-[Any other relevant information]
-
----
-Reporter: [Your Name]
-Date: [Date]
-Twitter: [@YourHandle]
+## References
+- [OWASP / CWE links]
 ```
 
-#### Example Report (Information Disclosure)
+Keep proof-of-concept screenshots clear and any video under two minutes.
 
-```markdown
-# Security Report: Exposed .env File on dev.example.com
+***
 
-## Executive Summary
-The development subdomain at dev.example.com exposes a .env file 
-containing sensitive configuration data including database credentials 
-and API keys.
+### Hour 20-24: Submission and follow-up
 
-## Technical Details
+On HackerOne, open your target program, click **Submit Report**, and fill in a clear title, the correct weakness category, your severity assessment, the report body, and attachments. After submitting, triage typically takes 0–3 days, an initial response 3–7 days, and resolution anywhere from two to six weeks.
 
-### Vulnerability
-- **Type:** Information Disclosure
-- **Severity:** High
-- **CVSS Score:** 7.5
+Possible outcomes: **Valid** (accepted, bounty awarded), **Informative** (valid but not bounty-eligible), **Duplicate** (someone reported it first), or **Not Applicable** (out of scope). If you've heard nothing after a week, a short, polite follow-up referencing your report number is appropriate.
 
-### Affected Endpoint
-- URL: https://dev.example.com/.env
-- HTTP Method: GET
+***
 
-### Steps to Reproduce
-1. Navigate to https://dev.example.com/.env
-2. Observe the .env file is accessible without authentication
-3. File contains DB_HOST, DB_PASSWORD, API_KEY, and other secrets
+### Common beginner mistakes
 
-### Proof of Concept
-[Screenshot showing .env file contents]
+* **Testing without authorization.** Only test programs you're registered for.
+* **Not reading scope.** Confirm an asset is in scope before touching it.
+* **Aggressive scanning on production.** Check each program's rules on automation.
+* **Poor report quality.** Vague reports get closed; clear steps and impact get paid.
+* **Giving up too soon.** Most hunting finds nothing; learn from feedback and try again.
 
-### Impact
-- Database credentials exposed
-- API keys for third-party services visible
-- Potential for data breach
-- Unauthorized system access possible
+***
 
-### Remediation
-1. Remove .env file from web root
-2. Move configuration files outside public directory
-3. Add .env to .gitignore
-4. Rotate all exposed credentials immediately
-5. Implement proper access controls
+### Practice targets (safe and legal)
 
-### References
-- https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure
-- https://cwe.mitre.org/data/definitions/200.html
-
----
-Reporter: John Doe
-Date: 2026-02-26
-Twitter: @johndoe
-```
-
-#### Creating Proof of Concept
-
-**Screenshots:**
+Before testing live programs, sharpen your skills on apps built for it: [PortSwigger Web Security Academy](https://portswigger.net/web-security), OWASP WebGoat, and DVWA (Damn Vulnerable Web App).
 
 ```bash
-# Install screenshot tool
-sudo apt install -y gnome-screenshot
-
-# Take screenshot
-gnome-screenshot -f poc_screenshot.png
-
-# Or use browser extension (Firefox/Chrome)
-# "FireShot" or "Awesome Screenshot"
-```
-
-**Screen Recording (Video):**
-
-```bash
-# Install simplescreenrecorder
-sudo apt install -y simplescreenrecorder
-
-# Record reproduction steps
-# Keep under 2 minutes
-# Show the entire process
-```
-
-***
-
-### Hour 20-24: Submission and Follow-Up
-
-#### Submitting on HackerOne
-
-1. **Log in** to https://hackerone.com
-2. **Navigate** to your target program
-3. **Click** "Submit Report"
-4. **Fill in:**
-   * Title: Clear and descriptive
-   * Weakness: Select appropriate category
-   * Severity: Your assessment
-   * Description: Use your report template
-   * Attachments: Screenshots/videos
-5. **Submit**
-
-#### What Happens Next?
-
-**Timeline:**
-
-* **0-3 days:** Triage review
-* **3-7 days:** Initial response
-* **1-4 weeks:** Investigation
-* **2-6 weeks:** Resolution and bounty
-
-**Possible Outcomes:**
-
-* ✅ **Valid** - Bug accepted, bounty awarded
-* ⚠️ **Informative** - Valid but not bounty-eligible
-* ❌ **Duplicate** - Someone reported first
-* ❌ **Not Applicable** - Out of scope or not a bug
-* ❌ **Spam** - Invalid submission
-
-#### Following Up
-
-**After 1 week (if no response):**
-
-```
-Hi [Triager Name],
-
-I'm following up on my report #[NUMBER] submitted on [DATE].
-The issue is [BRIEF DESCRIPTION].
-
-Could you please provide an update on the triage status?
-
-Thanks,
-[Your Name]
-```
-
-**Be patient but persistent.** Professional communication is key.
-
-***
-
-### 🎉 Congratulations!
-
-**You've completed your first bug bounty hunt!**
-
-#### What to Do Next
-
-1. **Celebrate** 🎉 - You did it!
-2. **Document** what you learned
-3. **Share** your experience (if allowed)
-4. **Start** your next hunt
-5. **Build** your reputation
-
-#### Building Your Reputation
-
-**Tips:**
-
-* Submit quality reports consistently
-* Help triagers understand the issue
-* Be professional and patient
-* Share knowledge with community
-* Build your online presence
-
-**Track Your Progress:**
-
-```bash
-# Create tracking spreadsheet
-cat << 'EOF' > ~/bugbounty/tracking.csv
-Date,Program,Vulnerability,Status,Bounty,Notes
-2026-02-26,Example Corp,Info Disclosure,New,Pending,First submission!
-EOF
-
-# Update after each submission
-```
-
-***
-
-### 💡 Pro Tips for Success
-
-#### Tip 1: Start Small
-
-* Don't target Google or Facebook first
-* Begin with VDPs (Vulnerability Disclosure Programs)
-* Look for "beginner friendly" tags
-
-#### Tip 2: Focus on One Bug Type
-
-* Master XSS first, then move to IDOR
-* Deep knowledge > broad knowledge
-* Become the "XSS expert"
-
-#### Tip 3: Document Everything
-
-* Save all commands you run
-* Screenshot everything
-* Keep notes on what worked
-
-#### Tip 4: Learn from Others
-
-* Read public reports on HackerOne
-* Follow bug hunters on Twitter
-* Join Discord communities
-
-#### Tip 5: Be Persistent
-
-* 90% of hunting is finding nothing
-* That 10% pays for everything
-* Consistency beats intensity
-
-***
-
-### 📚 Resources for Beginners
-
-#### Free Learning Platforms
-
-* [PortSwigger Web Security Academy](https://portswigger.net/web-security) - FREE
-* [TryHackMe](https://tryhackme.com) - Free tier available
-* [Hack The Box Academy](https://academy.hackthebox.com) - Free tier
-* [PentesterLab](https://pentesterlab.com) - Some free exercises
-
-#### YouTube Channels
-
-* [LiveOverflow](https://www.youtube.com/c/LiveOverflow) - Technical deep dives
-* [HackerSploit](https://www.youtube.com/c/HackerSploit) - Practical tutorials
-* [STÖK](https://www.youtube.com/c/STOKfredrik) - Bug bounty focused
-* [NahamSec](https://www.youtube.com/c/NahamSec) - Recon methodology
-
-#### Books (Free/Paid)
-
-* "The Web Application Hacker's Handbook" - Classic
-* "Real-World Bug Hunting" - Practical examples
-* "Bug Bounty Bootcamp" - Beginner friendly
-
-#### Communities
-
-* **Twitter:** #bugbountytips
-* **Discord:** HackerOne Discord, Bugcrowd Discord
-* **Reddit:** r/bugbounty, r/netsec
-
-***
-
-### ⚠️ Common Beginner Mistakes
-
-#### Mistake #1: Testing Without Authorization
-
-**❌ DON'T:** Test random websites **✅ DO:** Only test programs you're registered for
-
-#### Mistake #2: Not Reading Scope
-
-**❌ DON'T:** Test out-of-scope assets **✅ DO:** Carefully read scope before starting
-
-#### Mistake #3: Automated Scanning on Production
-
-**❌ DON'T:** Run aggressive scans without permission **✅ DO:** Check program rules about automation
-
-#### Mistake #4: Poor Report Quality
-
-**❌ DON'T:** Submit vague reports **✅ DO:** Clear steps, screenshots, impact explanation
-
-#### Mistake #5: Giving Up Too Soon
-
-**❌ DON'T:** Quit after first rejection **✅ DO:** Learn from feedback, try again
-
-***
-
-### 🎯 Practice Targets (Safe & Legal)
-
-#### Test These Without Fear:
-
-1. **PortSwigger Web Security Academy**
-   * https://portswigger.net/web-security
-   * Designed for learning
-   * No authorization needed
-2. **OWASP WebGoat**
-   * Intentionally vulnerable app
-   * Run locally
-   * Safe to break
-3. **DVWA (Damn Vulnerable Web App)**
-   * Practice SQL injection, XSS
-   * Local installation
-   * Learn safely
-
-#### Installation:
-
-```bash
-# Install DVWA with Docker
+# Run DVWA locally with Docker
 docker run -d -p 80:80 vulnerables/web-dvwa
-
-# Access at http://localhost
-# Login: admin/password
+# Access at http://localhost  (login: admin/password)
 ```
 
 ***
 
-### 📈 Your First 90 Days
+### Resources for beginners
 
-#### Week 1-2: Foundation
+**Learning platforms:** [PortSwigger Web Security Academy](https://portswigger.net/web-security) (free), [TryHackMe](https://tryhackme.com), [Hack The Box Academy](https://academy.hackthebox.com), [PentesterLab](https://pentesterlab.com).
 
-* Set up environment ✓
-* Complete this guide ✓
-* Submit 1-2 reports
+**YouTube:** [LiveOverflow](https://www.youtube.com/c/LiveOverflow), [HackerSploit](https://www.youtube.com/c/HackerSploit), [STÖK](https://www.youtube.com/c/STOKfredrik), [NahamSec](https://www.youtube.com/c/NahamSec).
 
-#### Week 3-4: Practice
+**Books:** _The Web Application Hacker's Handbook_, _Real-World Bug Hunting_, _Bug Bounty Bootcamp_.
 
-* Do PortSwigger labs
-* Read 10 public reports
-* Submit 2-3 more reports
-
-#### Month 2: Specialization
-
-* Pick one bug type (e.g., XSS)
-* Master it completely
-* Submit 5-10 reports
-
-#### Month 3: Automation
-
-* Build recon automation
-* Create testing scripts
-* Scale your efforts
-
-**Goal:** First bounty within 90 days!
+**Communities:** #bugbountytips on Twitter, the HackerOne and Bugcrowd Discords, and r/bugbounty.
 
 ***
 
-### 🏆 Success Metrics
-
-**Track These:**
-
-* Reports submitted: \_\_\_
-* Valid bugs: \_\_\_
-* Bounties earned: $\_\_\_
-* Programs joined: \_\_\_
-* Skills learned: \_\_\_
-
-**Set Goals:**
-
-* Week 1: Submit first report
-* Month 1: Get first valid triage
-* Month 3: Earn first bounty
-* Month 6: $1000 total earnings
-* Year 1: $10,000 total earnings
-
-***
-
-**You did it! Welcome to bug bounty hunting! 🐛💰**
-
-_Now go find some bugs!_
+Welcome to bug bounty hunting — now go find some bugs.

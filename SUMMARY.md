@@ -96,7 +96,7 @@
   * [🇬🇹 Hacking Templates](exploitation/hacking-templates.md)
 * [AI for Bug Bounty](ai-for-bug-bounty/README.md)
   * [AI-Powered Reconnaissance: The Complete 2026 Guide](ai-for-bug-bounty/ai-powered-reconnaissance-the-complete-2026-guide.md)
-  * [How AI Changed My Bug Bounty Workflow: 60% Faster Recon, 3x More Findings](ai-for-bug-bounty/how-ai-changed-my-bug-bounty-workflow-60-faster-recon-3x-more-findings.md)
+  * [How AI Changed My Bug Bounty Workflow](ai-for-bug-bounty/how-ai-changed-my-bug-bounty-workflow-60-faster-recon-3x-more-findings.md)
   * [🤖 AI-Assisted Bug Hunting: Prompts, Tools & Real Results](ai-for-bug-bounty/ai-assisted-bug-hunting.md)
   * [Supercharge Your Bug Bounty Hunting with Claude Security Skills: The Complete Guide](ai-for-bug-bounty/supercharge-your-bug-bounty-hunting-with-claude-security-skills-the-complete-guide.md)
 * [Write-ups & Reporting](write-ups-and-reporting/README.md)
