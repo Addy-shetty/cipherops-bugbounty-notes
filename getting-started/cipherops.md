@@ -23,40 +23,29 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # 😎 Cipherops
 
-<div align="left"><figure><img src="../.gitbook/assets/image (9).png" alt="https://cipherops.tech" width="188"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (9).png" alt="CipherOps" width="188"><figcaption></figcaption></figure></div>
 
-Presenting CipherOps: Your Online protection Arrangement
+[**Twitter**](https://twitter.com/Cipher0ps_tech?t=MlqumIay8I49eWwhjgrotg\&s=09) · [**LinkedIn**](https://www.linkedin.com/company/cipherops/) · [**Telegram**](https://t.me/bugbounty_tech) · [**Instagram**](https://instagram.com/cipherops_tech?igshid=MzNlNGNkZWQ4Mg==)
 
-Welcome to CipherOps, where we're devoted to defending your advanced resources with enthusiasm and mastery. In the present speedy computerized world, the significance of network protection couldn't possibly be more significant. To stay ahead of changing threats, our team is dedicated to providing dependable security solutions.
+***
 
-## :heavy\_multiplication\_x: [<mark style="color:red;">Twitter</mark>](https://twitter.com/Cipher0ps_tech?t=MlqumIay8I49eWwhjgrotg\&s=09) :link: [<mark style="color:red;">Linkedin</mark>](https://www.linkedin.com/company/cipherops/) :tv: [<mark style="color:red;">Telegram</mark> ](https://t.me/bugbounty_tech):tada: [<mark style="color:red;">Instagram</mark>](https://instagram.com/cipherops_tech?igshid=MzNlNGNkZWQ4Mg==)
+CipherOps is a cybersecurity community and knowledge base focused on bug bounty hunting and offensive security. This space collects the notes, tools, and techniques we use day to day, organized so you can actually find them.
 
-**Our Mission**
+## What you'll find here
 
-At CipherOps, our central goal is straightforward yet basic: to safeguard your association's delicate data and guarantee the uprightness of your frameworks. In our current reality where digital dangers flourish, keeping a protected climate is imperative to forestall possibly extreme outcomes.
+* **Hands-on recon, web, network, and cloud techniques** — the methods we reach for on real targets, with copy-paste commands.
+* **Tool guides** — what each tool does, when to use it, and how it fits into a workflow.
+* **Write-ups and reporting** — real findings broken down, plus how to write reports that get triaged and paid.
+* **Resources for getting started** — roadmaps, practice platforms, cheat sheets, and references for newcomers.
 
-**What We Offer**
+## Who it's for
 
-We offer a far reaching scope of safety administrations custom-made to meet your particular requirements. We have the tools and knowledge to keep your systems safe, from cutting-edge security assessments like penetration testing and vulnerability assessments to individualized cybersecurity consultancy.
+Whether you're filing your first report or sharpening an existing workflow, the material is grouped by topic so you can go straight to what you need. Start with [Getting Started](./) if you're new, or jump into [Reconnaissance](../recon-tips/) and [Web Application Testing](../web-application/) if you already know your way around.
 
-**Security Preparing and Awareness**
-
-We have faith in the force of schooling as the principal line of safeguard against digital dangers. Our preparation programs are intended to outfit your workers with the information and abilities to recognize and moderate dangers, cultivating a culture of safety mindfulness inside your association.
-
-**Why Pick CipherOps**
-
-Our gathering contains certified specialists with expansive inclusion with network wellbeing. To furnish you with effective, individualized arrangements, we stay aware of the latest business drifts and arising dangers. We adopt a tweaked strategy to address your particular difficulties and targets since we perceive that every association is remarkable.
-
-**Client Satisfaction**
-
-Your fulfillment is our need. We mean to surpass your assumptions by exceeding everyone's expectations to guarantee that our administrations address your issues. Our devoted help group is dependably accessible to address any worries and give continuous help.
-
-**Contact Us**
-
-Prepared to upgrade your association's network protection? Connect with CipherOps today to examine your security needs. Visit our site at [cipherops.xyz](https://cipherops.xyz) to find out about our administrations and reach out to our group. Secure your computerized resources with CipherOps and remain in front of digital dangers.
-
-_(Note: This message fills instructive needs and doesn't ensure explicit results or results.)_
+Everything here is shared for educational purposes. Only test systems you're authorized to test.
