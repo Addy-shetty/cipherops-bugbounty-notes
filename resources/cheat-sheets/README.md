@@ -17,7 +17,10 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
-# 👻 Cheat-sheet's
+# 👻 Cheat Sheets
 
+Quick-reference cheat sheets for Linux, Windows, bug bounty, and general hacking.

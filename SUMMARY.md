@@ -114,7 +114,7 @@
   * [All DAMN vulnerable resources](resources/all-damn-vulnerable-resources.md)
   * [Hacking Resources](resources/hacking-resources.md)
   * [📙 Essential Bug Bounty Resources: Books and References](resources/books-and-references.md)
-  * [👻 Cheat-sheet's](resources/cheat-sheets/README.md)
+  * [👻 Cheat Sheets](resources/cheat-sheets/README.md)
     * [Bug-Bounty Cheatsheet](resources/cheat-sheets/bug-bounty-cheatsheet.md)
     * [Linux-Cheatsheet](resources/cheat-sheets/linux-cheatsheet.md)
     * [Windows-Cheatsheet](resources/cheat-sheets/windows-cheatsheet.md)
